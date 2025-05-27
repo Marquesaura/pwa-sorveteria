@@ -1,0 +1,23 @@
+{
+	"name":"APP sorveteria",
+	"short_name": "Sorvetes",
+	"start_url": "C:/Users/aluno/Documents/laura/app-cleide/pwa/index.html",
+	"display": "standalone",
+	"backgroud_color":"#51abb2",
+	"theme_color": "#f0dfc8",
+    "prefer_related_applications": false,
+    "description": "Sorveteria com diversidade de sabores e localidades.",
+	"icons":[
+	{
+		"src": "logo.png",
+		"purpose": "monochrome maskable",
+		"type": "image/png"
+	},
+	{
+		"src": "icons/ic512.png",
+		"sizes": "512x512",
+		"type": "image/png"
+	}
+]
+
+}

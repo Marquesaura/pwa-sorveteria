@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorvetes </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href = "manifest.json">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="logo" id="logo">
+        <aside id="secao-canto">
+            <a href="index.html">Início</a> <br>
+            <a href="produtos.html">Produtos</a><br>
+            <a href="unidades.html">Unidades</a><br>
+            <img src="star.png" alt="estrela" id="estrela">
+        </aside>
+    </header>
+    <main id="inicio">
+        <h3 id="boas-vindas">Bem-vindo à nossa sorveteria!</h3>
+        <p id="texto-inicial">
+            Aqui, cada sabor conta uma história e cada sorvete traz uma experiência única! Nossos gelados são
+            preparados com ingredientes selecionados e muito carinho para garantir aquele sabor irresistível.
+        </p>
+        <p id="texto-inicial">
+            Oferecemos uma variedade incrível de opções, desde clássicos como chocolate e morango até sabores
+            especiais que vão surpreender o seu paladar. Além dos sorvetes tradicionais, temos milk-shakes cremosos,
+            sobremesas refrescantes e opções saudáveis para todos os gostos.
+        </p>
+    </main>
+
+    <footer>
+        <img src="logo.png" alt="logo" id="logo-footer">
+    </footer>
+    <ul id="todo-list"></ul>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(registration => { console.log('Serviço Iniciado - Service Start', registration.scope); }).catch(error => { console.log('Falha na inicialização do serviço - Service Fail'), error });
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

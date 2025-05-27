@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Questrial', Georgia, 'Times New Roman', Times, serif;
+    background-color: #51abb2;
+}
+
+#secao-canto{
+    background-color: #f0dfc8;
+    margin-left: 90%;
+    font-size: 21px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 193px;
+}
+#secao-canto a{
+    margin-top: 7px;
+    text-decoration: none;
+    color: #000000;
+    margin: 5px;
+}
+#secao-canto a:hover, #estrela:hover {
+    cursor: pointer;
+    font-size: 22px;
+    height: 33px;
+    text-decoration: underline #000000;
+    transition: 0.4s;
+    color: #51abb2;
+}
+#logo {
+    width: 200px;
+    margin-top: -20px;
+    padding: -20px;
+}
+
+#logo-footer {
+    width: 200px;
+    align-items: center;
+    margin-left: 45%;
+}
+#estrela{
+    height: 30px;
+}
+footer{
+    margin-bottom: -4%;
+}
+#boas-vindas{
+    color: #ffb1a5;
+    font-size: 30px;
+}
+#inicio{
+    margin: 90px;
+    padding: 40px;
+    text-align: justify;
+}
+#texto-inicial{
+    text-align: justify;
+    font-size: 25px;
+}
+/*produtos.html */
+#menu {
+    background-color: #f0dfc8;
+    margin: 100px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#titu-main {
+    font-size: 23px;
+    text-align: center;
+    padding: 10px;
+}
+#titulo-menu{
+    font-size: 44px;
+    text-align: center;
+    padding: 10px;
+}
+/*unidades.html*/
+#mapa{
+    border-radius: 10px;
+    margin-left: 30%;
+
+}
