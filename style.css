@@ -17,6 +17,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     height: 193px;
+    margin-top: -15%;
 }
 
 #secao-canto a {
@@ -75,23 +76,53 @@ footer {
     width: 70%;
 }
 
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 #anuncio-sorvetes {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20%;
-    margin-bottom: 50px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10%;
+}
 
+#anuncio-sorvetes::-webkit-scrollbar {
+    height: 8px;
+}
+
+#anuncio-sorvetes::-webkit-scrollbar-track {
+    background: #51abb2;
+    border-radius: 4px;
+}
+
+#anuncio-sorvetes::-webkit-scrollbar-thumb {
+    background-color: #f0dfc8;
+    border-radius: 4px;
+}
+
+#anuncio-sorvetes::-webkit-scrollbar-thumb:hover {
+    background-color: #e5d4bd;
 }
 
 #anuncio-sorvetes img {
     height: 400px;
+    width: auto;
     border-radius: 10px;
-    margin-top: 25px;
-    margin-left: 15px;
+    object-fit: contain;
+    scroll-snap-align: center;
+    flex: 0 0 auto;
 }
 
 /*produtos.html */
