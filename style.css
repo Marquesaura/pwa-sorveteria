@@ -10,7 +10,7 @@ body {
     background-color: #51abb2;
 }
 
-#secao-canto{
+#secao-canto {
     background-color: #f0dfc8;
     margin-left: 90%;
     font-size: 21px;
@@ -18,13 +18,16 @@ body {
     border-radius: 10px;
     height: 193px;
 }
-#secao-canto a{
+
+#secao-canto a {
     margin-top: 7px;
     text-decoration: none;
     color: #000000;
     margin: 5px;
 }
-#secao-canto a:hover, #estrela:hover {
+
+#secao-canto a:hover,
+#estrela:hover {
     cursor: pointer;
     font-size: 22px;
     height: 33px;
@@ -32,10 +35,10 @@ body {
     transition: 0.4s;
     color: #51abb2;
 }
+
 #logo {
     width: 200px;
-    margin-top: -20px;
-    padding: -20px;
+    margin: 20px;
 }
 
 #logo-footer {
@@ -43,25 +46,54 @@ body {
     align-items: center;
     margin-left: 45%;
 }
-#estrela{
+
+#estrela {
     height: 30px;
 }
-footer{
+
+footer {
     margin-bottom: -4%;
 }
-#boas-vindas{
+
+#boas-vindas {
     color: #ffb1a5;
     font-size: 30px;
 }
-#inicio{
-    margin: 90px;
-    padding: 40px;
+#banner-sorvetes{
+    width: 30%;
+
+}
+#inicio {
+    margin-left: 40%;
+    margin-top: -40%;
     text-align: justify;
 }
-#texto-inicial{
+
+#texto-inicial {
     text-align: justify;
     font-size: 25px;
+    width: 70%;
 }
+
+#anuncio-sorvetes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    margin-bottom: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+}
+
+#anuncio-sorvetes img {
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
 /*produtos.html */
 #menu {
     background-color: #f0dfc8;
@@ -81,13 +113,15 @@ p {
     text-align: center;
     padding: 10px;
 }
-#titulo-menu{
+
+#titulo-menu {
     font-size: 44px;
     text-align: center;
     padding: 10px;
 }
+
 /*unidades.html*/
-#mapa{
+#mapa {
     border-radius: 10px;
     margin-left: 30%;
 
