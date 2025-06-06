@@ -54,16 +54,19 @@ body {
 
 footer {
     margin-bottom: -4%;
+    margin-top: 45%;
 }
 
 #boas-vindas {
     color: #ffb1a5;
     font-size: 30px;
 }
-#banner-sorvetes{
+
+#banner-sorvetes {
     width: 30%;
 
 }
+
 #inicio {
     margin-left: 40%;
     margin-top: -40%;
@@ -76,54 +79,43 @@ footer {
     width: 70%;
 }
 
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
 #anuncio-sorvetes {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    padding: 20px;
-    margin: 20px auto;
-    width: 90%;
-    -webkit-overflow-scrolling: touch;
-    margin-top: 10%;
+    margin: 10%;
+    margin-top: 25%;
 }
 
-#anuncio-sorvetes::-webkit-scrollbar {
-    height: 8px;
+#experimente-h2 {
+    width: 380px;
+    font-size: 60px;
+    margin-bottom: -25%;
 }
 
-#anuncio-sorvetes::-webkit-scrollbar-track {
-    background: #51abb2;
-    border-radius: 4px;
+#saudavel-h2 {
+    width: 380px;
+    font-size: 60px;
+    margin-top: -25%;
+    text-align: right;
+    margin-left: 65%;
 }
 
-#anuncio-sorvetes::-webkit-scrollbar-thumb {
-    background-color: #f0dfc8;
-    border-radius: 4px;
+#milk-shakes-sabores{
+    margin-left: 33%;
 }
 
-#anuncio-sorvetes::-webkit-scrollbar-thumb:hover {
-    background-color: #e5d4bd;
+#picole-fruta {
+    margin-right: 23%;
 }
 
 #anuncio-sorvetes img {
-    height: 400px;
-    width: auto;
     border-radius: 10px;
-    object-fit: contain;
-    scroll-snap-align: center;
-    flex: 0 0 auto;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
 }
+
+
 
 /*produtos.html */
 #menu {

@@ -1,6 +1,6 @@
 {
 	"name":"APP sorveteria",
-	"short_name": "Sorvetes",
+	"short_name": "Glace",
 	"start_url": "index.html",
 	"display": "standalone",
 	"backgroud_color":"#51abb2",
