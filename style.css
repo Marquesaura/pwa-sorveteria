@@ -98,7 +98,7 @@ footer {
     margin-left: 65%;
 }
 
-#milk-shakes-sabores{
+#milk-shakes-sabores {
     margin-left: 33%;
 }
 
@@ -116,8 +116,7 @@ footer {
 }
 
 
-
-/*produtos.html */
+/*produto.html */
 #menu {
     background-color: #f0dfc8;
     margin: 100px;
@@ -141,6 +140,65 @@ p {
     font-size: 44px;
     text-align: center;
     padding: 10px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#barra-sorvetes {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10%;
+
+}
+
+#barra-sorvetes::-webkit-scrollbar {
+    height: 8px;
+}
+
+#barra-sorvetes::-webkit-scrollbar-track {
+    background: #51abb2;
+    border-radius: 4px;
+}
+
+#barra-sorvetes::-webkit-scrollbar-thumb {
+    background-color: #f0dfc8;
+    border-radius: 4px;
+}
+
+#barra-sorvetes::-webkit-scrollbar-thumb:hover {
+    background-color: #e5d4bd;
+}
+
+
+#barra-sorvetes-conteudo {
+    min-width: 300px;
+    display: none;
+}
+
+#barra-sorvetes-conteudo img {
+    height: 350px;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    object-fit: contain;
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    margin-right: 10px;
 }
 
 /*unidades.html*/
