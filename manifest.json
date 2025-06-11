@@ -9,12 +9,12 @@
     "description": "Sorveteria com diversidade de sabores e localidades.",
 	"icons":[
 	{
-		"src": "folder/logo_.png",
+		"src": "folder/Glace.png",
 		"purpose": "monochrome maskable",
 		"type": "image/png"
 	},
 	{
-		"src": "folder/logo_.png",
+		"src": "folder/Glace.png",
 		"sizes": "512x512",
 		"type": "image/png"
 	}
