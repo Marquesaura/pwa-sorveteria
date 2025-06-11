@@ -3,27 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.getElementById('next');
   const container = document.getElementById('carousel-container');
 
-  let scrollAmount = 0;
-  const scrollPerClick = 220;
+  const scrollPerClick = 400; // ajuste conforme o tamanho da imagem
 
   prevBtn.addEventListener('click', () => {
-    scrollAmount -= scrollPerClick;
-    if (scrollAmount < 0) scrollAmount = 0;
-    container.scrollTo({
+    container.scrollBy({
       top: 0,
-      left: scrollAmount,
+      left: -scrollPerClick,
       behavior: 'smooth'
     });
   });
 
   nextBtn.addEventListener('click', () => {
-    scrollAmount += scrollPerClick;
-    if (scrollAmount > container.scrollWidth) {
-      scrollAmount = container.scrollWidth;
-    }
-    container.scrollTo({
+    container.scrollBy({
       top: 0,
-      left: scrollAmount,
+      left: scrollPerClick,
       behavior: 'smooth'
     });
   });

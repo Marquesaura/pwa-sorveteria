@@ -171,14 +171,17 @@ nav a {
   transition: transform 0.5s ease;
   gap: 1rem;
   overflow-x: auto; 
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
+  width: 80%;
+ 
 }
 
   #carousel-container img {
-    width: 60%;
+    width: 400px;
     height: auto;
     border-radius: 8px;
     margin: 10px;
+    flex-shrink: 0
   }
 
   #carousel button {
@@ -189,6 +192,7 @@ nav a {
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
+
   }
 
 
