@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-  const container = document.querySelector('.carousel-container');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  const container = document.getElementById('carousel-container');
 
   let scrollAmount = 0;
   const scrollPerClick = 220;
