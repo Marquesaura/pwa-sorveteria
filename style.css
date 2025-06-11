@@ -200,6 +200,53 @@ p {
     flex: 0 0 auto;
     margin-right: 10px;
 }
+/*carrossel*/
+nav a {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  section {
+    padding: 2rem;
+  }
+
+ #produtos h2 {
+    color: #f06;
+    margin-bottom: 1rem;
+  }
+
+  #carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+  }
+
+  #carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1rem;
+  }
+
+  #carousel-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  #carousel button {
+    background-color: #f06;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
 
 /*unidades.html*/
 #mapa {
