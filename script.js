@@ -1,24 +1,30 @@
-let currentIndex = 0;
-const sections = document.querySelectorAll('#barra-sorvetes-conteudo');
+document.addEventListener('DOMContentLoaded', () => {
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  const container = document.querySelector('.carousel-container');
 
-function showSection(index) {
-    sections.forEach((sec, i) => {
-        sec.classList.toggle('active', i === index);
+  let scrollAmount = 0;
+  const scrollPerClick = 220;
+
+  prevBtn.addEventListener('click', () => {
+    scrollAmount -= scrollPerClick;
+    if (scrollAmount < 0) scrollAmount = 0;
+    container.scrollTo({
+      top: 0,
+      left: scrollAmount,
+      behavior: 'smooth'
     });
-}
+  });
 
-function nextSection() {
-    if (currentIndex < sections.length - 1) {
-        currentIndex++;
-        showSection(currentIndex);
+  nextBtn.addEventListener('click', () => {
+    scrollAmount += scrollPerClick;
+    if (scrollAmount > container.scrollWidth) {
+      scrollAmount = container.scrollWidth;
     }
-}
-
-function prevSection() {
-    if (currentIndex > 0) {
-        currentIndex--;
-        showSection(currentIndex);
-    }
-}
-
-showSection(currentIndex);
+    container.scrollTo({
+      top: 0,
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+});
