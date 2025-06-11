@@ -64,6 +64,7 @@ footer {
 
 #banner-sorvetes {
     width: 30%;
+    height: auto;
 
 }
 
@@ -148,43 +149,41 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-  }
+}
 
-  section {
+section {
     padding: 2rem;
-  }
+}
 
- #produtos h2 {
+#produtos h2 {
     color: #f06;
     margin-bottom: 1rem;
-  }
+}
 
-  #carousel {
+#carousel {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-  }
-
- #carousel-container {
-  display: flex;
-  transition: transform 0.5s ease;
-  gap: 1rem;
-  overflow-x: auto; 
-  scroll-behavior: smooth;
-  width: 80%;
- 
 }
 
-  #carousel-container img {
-    width: 700px;
+#carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+#carousel-container img {
+    width: 400px;
     height: auto;
     border-radius: 8px;
     margin: 10px;
     flex-shrink: 0
-  }
+}
 
-  #carousel button {
+#carousel button {
     background-color: #f06;
     color: white;
     border: none;
@@ -193,12 +192,60 @@ nav a {
     cursor: pointer;
     border-radius: 5px;
 
-  }
+}
 
 
 /*unidades.html*/
 #mapa {
     border-radius: 10px;
     margin-left: 30%;
+
+}
+
+@media screen and (max-width: 768px) {
+    #secao-canto {
+        width: 120px;
+        height: 150px;
+        margin-left: 607px;
+        margin-top: -200px;
+        font-size: 30px;
+    }
+    #banner-sorvetes{
+        height: auto;
+        width: 350px;
+        margin-top: 150px;
+        margin-left: -100px;
+        object-fit: cover;
+    }
+    #inicio{
+        margin-top: -520px;
+        width: 600px;
+    }
+    #boas-vindas{
+        margin-top: -520px;
+    }
+    #estrela{
+        width: 45px;
+        height: auto;
+    }
+    #experimente-h2{
+        width: 550px;
+        font-size: 40px;
+        margin-left: 40px;
+    }
+    #milk-shakes-sabores, #sorvete-derretendo, #mão-pote, #picole-fruta{
+        display: none;
+    }
+   #milkshake-pretzel{
+        margin-top: 200px;
+        
+   }
+   #anuncio-sorvetes img{
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        align-items: center;
+        margin-left: 60px;
+   }
 
 }
