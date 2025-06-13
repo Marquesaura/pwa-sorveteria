@@ -165,25 +165,24 @@ section {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-}
-
-#carousel-container {
+    overflow: hidden;
+  }
+  
+  #carousel-container {
     display: flex;
-    transition: transform 0.5s ease;
-    gap: 1rem;
     overflow-x: auto;
     scroll-behavior: smooth;
-}
-
-#carousel-container img {
+    gap: 1rem;
+  }
+  
+  #carousel-container img {
     width: 400px;
     height: auto;
     border-radius: 8px;
-    margin: 10px;
-    flex-shrink: 0
-}
-
-#carousel button {
+    flex-shrink: 0;
+  }
+  
+  #carousel button {
     background-color: #f06;
     color: white;
     border: none;
@@ -191,9 +190,8 @@ section {
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
-
-}
-
+  }
+  
 
 /*unidades.html*/
 #mapa {
@@ -204,22 +202,22 @@ section {
 
 @media screen and (max-width: 768px) {
     #secao-canto {
-        width: 120px;
-        height: 150px;
-        margin-left: 490px;
+        width: 16%;
+        height: 16%;
+        margin-left: 78%;
         margin-top: -200px;
         font-size: 30px;
     }
     #banner-sorvetes{
-        height: 450px;
-        width: auto;
+        height: auto;
+        width: 42%;
         margin-top: 200px;
         margin-left: -80px;
         object-fit: cover;
     }
     #inicio{
         margin-top: -570px;
-        width: 470px;
+        width: 75%;
         margin-left: 250px;
     }
     #boas-vindas{

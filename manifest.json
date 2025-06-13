@@ -1,23 +1,21 @@
 {
-	"name":"APP sorveteria",
-	"short_name": "Glace",
-	"start_url": "index.html",
-	"display": "standalone",
-	"backgroud_color":"#51abb2",
-	"theme_color": "#f0dfc8",
-    "prefer_related_applications": false,
-    "description": "Sorveteria com diversidade de sabores e localidades.",
-	"icons":[
-	{
-		"src": "folder/Glace.png",
-		"purpose": "monochrome maskable",
-		"type": "image/png"
-	},
-	{
-		"src": "folder/Glace.png",
-		"sizes": "512x512",
-		"type": "image/png"
-	}
-]
-
+  "name": "Glace - Fábrica de Sorvete",
+  "short_name": "Glace",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#51abb2",
+  "background_color": "#51abb2",
+  "display": "standalone"
 }
