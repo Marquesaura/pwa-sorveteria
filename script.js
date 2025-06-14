@@ -1,39 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.carousel-img');
   const prevBtn = document.getElementById('prev');
   const nextBtn = document.getElementById('next');
-  const container = document.getElementById('carousel-container');
+  let currentIndex = 0;
 
-  let scrollAmount = 0;
-  const scrollPerClick = 220;
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove('active');
+      if (i === index) {
+        img.classList.add('active');
+      }
+    });
+  }
 
   prevBtn.addEventListener('click', () => {
-    scrollAmount -= scrollPerClick;
-    if (scrollAmount < 0) scrollAmount = 0;
-    container.scrollTo({
-      top: 0,
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+    prevBtn.style.backgroundColor = 'pink';
+    setTimeout(() => {
+      prevBtn.style.backgroundColor = '#ffb1a5';
+    }, 600);
   });
 
   nextBtn.addEventListener('click', () => {
-    scrollAmount += scrollPerClick;
-    if (scrollAmount > container.scrollWidth) {
-      scrollAmount = container.scrollWidth;
-    }
-    container.scrollBy({
-      top: 0,
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+    nextBtn.style.backgroundColor = 'purple';
+    setTimeout(() => {
+      nextBtn.style.backgroundColor = '#ffb1a5';
+    }, 600);
   });
+
+  showImage(currentIndex);
+
+
 });
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('service-worker.js')
-      .then(() => console.log('Service Worker registrado com sucesso!'))
-      .catch(err => console.error('Erro ao registrar o Service Worker', err));
-  });
-}
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.style.opacity = '0';
+  preloader.style.transition = 'opacity 5s ease';
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 1100);
+});
