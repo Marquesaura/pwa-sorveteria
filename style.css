@@ -165,33 +165,48 @@ section {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+#carousel-container {
+    width: 700px;
+    height: 500px;
     overflow: hidden;
-  }
-  
-  #carousel-container {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 1rem;
-  }
-  
-  #carousel-container img {
-    width: 400px;
-    height: auto;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-  
-  #carousel button {
-    background-color: #f06;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.carousel-img.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+#carousel button {
+    background-color: #ffb1a5;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
+}
+
+
 
 /*unidades.html*/
 #mapa {
@@ -199,6 +214,39 @@ section {
     margin-left: 30%;
 
 }
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #51abb2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(2.3);
+    opacity: 1;
+  }
+}
+
+#loader-logo {
+  width: 100px;
+  transition: transform 0.4s ease;
+  animation: zoomIn 2s ease forwards;
+}
+
 
 @media screen and (max-width: 768px) {
     #secao-canto {
@@ -208,51 +256,64 @@ section {
         margin-top: -200px;
         font-size: 30px;
     }
-    #banner-sorvetes{
+
+    #banner-sorvetes {
         height: auto;
         width: 42%;
         margin-top: 200px;
         margin-left: -80px;
         object-fit: cover;
     }
-    #inicio{
+
+    #inicio {
         margin-top: -570px;
         width: 75%;
         margin-left: 250px;
     }
-    #boas-vindas{
+
+    #boas-vindas {
         margin-top: -520px;
     }
-    #estrela{
+
+    #estrela {
         width: 45px;
         height: auto;
     }
-    #experimente-h2{
+
+    #experimente-h2 {
         width: 550px;
         font-size: 40px;
         margin-left: 40px;
     }
-    #milk-shakes-sabores, #sorvete-derretendo, #mão-pote, #picole-fruta{
+
+    #milk-shakes-sabores,
+    #sorvete-derretendo,
+    #mão-pote,
+    #picole-fruta {
         display: none;
     }
-   #milkshake-pretzel{
+
+    #milkshake-pretzel {
         margin-top: 200px;
-        
-   }
-   #anuncio-sorvetes img{
+
+    }
+
+    #anuncio-sorvetes img {
         width: 500px;
         height: 500px;
         object-fit: cover;
         align-items: center;
         margin-left: 60px;
-   }
-   footer p{
-    align-items: center;
-    margin-left: 40px;
-    width: 550px;
-    margin-bottom: 40px;
-   }
-   #logo-footer{
-    margin-left: 206px;
-   }
+    }
+
+    footer p {
+        align-items: center;
+        margin-left: 40px;
+        width: 550px;
+        margin-bottom: 40px;
+    }
+
+    #logo-footer {
+        margin-left: 206px;
+    }
 }
