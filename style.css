@@ -118,13 +118,37 @@ footer {
 
 
 /*produto.html */
-#menu {
+#sec-prod {
     background-color: #f0dfc8;
-    margin: 100px;
-    padding: 40px;
+    margin: 30px;
+    padding: 10px;
     border-radius: 20px;
+    width: 27%;
+    display: inline-block;
+    min-height: 400px;
+    vertical-align: top;
 }
-
+#sec-prod img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    padding: -20px;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 23%;
+}
+#sec-prod:hover{
+    width: 27.8%;
+    background-color: #e7cfa9;
+    transition: 0.4s;
+    margin: 25px;
+}
+#nome{
+    margin-left: 22%;
+}
+ul{
+    text-decoration: none;
+}
 p {
     font-size: 20px;
     text-align: center;
@@ -143,6 +167,9 @@ p {
     padding: 10px;
 }
 
+#itens{
+    display: none;
+}
 /*carrossel*/
 nav a {
     margin: 0 1rem;
@@ -188,6 +215,7 @@ section {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   pointer-events: none;
+  border-radius: 10px;
 }
 
 .carousel-img.active {
@@ -206,6 +234,24 @@ section {
     border-radius: 5px;
 }
 
+/* carrinho */
+#adicionar{
+    width: 205px;
+    font-size: 17px;
+    background-color: #f06;
+    padding: 10px; 
+    margin: 20px;
+    margin-left: 22%;
+    border-radius: 10px;
+    border-color: #f06;
+   
+}
+
+#valor{
+margin-bottom: -50px;
+text-align: left;
+margin-left: 250px;
+}
 
 
 /*unidades.html*/
