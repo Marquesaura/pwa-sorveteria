@@ -115,6 +115,15 @@ function carrinho() {
       if (tamanho) texto += ` - Tamanho: ${tamanho}`;
       if (saboresSelecionados.length > 0) texto += ` - Sabores: ${saboresSelecionados.join(", ")}`;
 
+      // Verificar se já existe item igual no carrinho
+      const carrinho = document.getElementById("carrinho");
+      const itensExistentes = carrinho.querySelectorAll("p");
+      const itemDuplicado = Array.from(itensExistentes).some(p => p.textContent === texto);
+      if (itemDuplicado) {
+        alert("Este item já está no carrinho.");
+        return;
+      }
+
       // Criar item no carrinho
       const itemCarrinho = document.createElement("p");
       itemCarrinho.textContent = texto;
@@ -123,16 +132,13 @@ function carrinho() {
       itemCarrinho.style.borderRadius = "10px";
       itemCarrinho.style.padding = "5px";
       itemCarrinho.style.margin = "5px 0";
+      itemCarrinho.style.width = "300px"
 
       // Adicionar ao carrinho
-      document.getElementById("carrinho").appendChild(itemCarrinho);
+      carrinho.appendChild(itemCarrinho);
     });
   });
 }
-
-
-
-
 
 // function excluirItem(){
 
