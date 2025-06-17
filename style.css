@@ -118,7 +118,7 @@ footer {
 
 
 /*produto.html */
-#sec-prod {
+.sec-prod {
     background-color: #f0dfc8;
     margin: 30px;
     padding: 10px;
@@ -128,7 +128,7 @@ footer {
     min-height: 400px;
     vertical-align: top;
 }
-#sec-prod img {
+.sec-prod img {
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -137,7 +137,7 @@ footer {
     align-items: center;
     margin-left: 23%;
 }
-#sec-prod:hover{
+.sec-prod:hover{
     width: 27.8%;
     background-color: #e7cfa9;
     transition: 0.4s;
@@ -167,8 +167,33 @@ p {
     padding: 10px;
 }
 
-#itens{
+#opcoes{
     display: none;
+    font-size: 20px;
+    color: #795833;
+    margin: 20px;
+    border-radius: 10px;
+}
+#opcoes input{
+    padding-right: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#tamanhos{
+    font-size: 20px;
+    color: #795833;
+    margin-left: 40%;
+    border-radius: 10px;
+}
+.mais{
+    width: 110px;
+    font-size: 15px;
+    background-color: #ffb1a5;
+    padding: 7px; 
+    margin: 10px;
+    margin-left: 70%;
+    border-radius: 10px;
+    border-color: #ffb1a5;
 }
 /*carrossel*/
 nav a {
@@ -235,7 +260,7 @@ section {
 }
 
 /* carrinho */
-#adicionar{
+.adicionar{
     width: 205px;
     font-size: 17px;
     background-color: #f06;

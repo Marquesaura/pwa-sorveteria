@@ -39,156 +39,178 @@
         </section>
 
         <main id="menu">
-            <div id="sec-prod">
+            <div class="sec-prod">
                 <img src="folder/milkshake-pretzel.jpg" alt="milkshake-pretzel" id="milkshake-pretzel" loading="lazy">
-                <h3 id="Nome">Milkshake de chocolate com pretzel</h3>
+                <h3 class="nome">Milkshake</h3>
                 <p> Descrição: Uma combinação deliciosa de sorvete de chocolate cremoso, calda intensa e pedacinhos
                     crocantes de
                     pretzel. Doce e salgado na medida certa, servido com chantilly para uma finalização irresistível.
                     Perfeito para quem busca sabor e textura em cada gole.
                 </p>
-                <select name="opcoes-tamanhos" id="tamanhos">
-                    <option value="300">300 ml</option>
-                    <option value="400">400 ml</option>
-                    <option value="500">500 ml</option>
-                </select>
+                <div id="opcoes">
+                    <div id="itens-milkshake">
+                        <select name="opcoes-tamanhos" id="tamanhos">
+                            <option value="300">300 ml</option>
+                            <option value="400">400 ml</option>
+                            <option value="500">500 ml</option>
+                        </select>
+                    </div>
+                </div>
                 <br>
 
-                <span id="valor">Valor: R$22,00</span>
-                <button id="adicionar" onclick="adicionarAoCarrinho('Milkshake', 22)">Adicionar ao carrinho</button>
+                <span class="valor">Valor: R$22,00</span>
+                <button class="mais">Mais opções</button>
+                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
+
             </div>
 
-            <div id="sec-prod">
+            <div class="sec-prod">
                 <img src="folder/sorvete-derretendo-no-cone.jpg" alt="sorvete-derretendo-no-cone"
                     id="sorvete-derretendo" loading="lazy">
-                <h3 id="nome">Sorvete no cone</h3>
+                <h3 class="nome">Sorvete na casquinha</h3>
                 <p>Descrição: Um sorvete no cone é composto por uma porção de sorvete moldada sobre um cone
                     crocante,
-                    garantindo suporte estrutural e absorção mínima de umidade.
+                    garantindo suporte estrutural e absorção mínima de umidade.</p>
+                <div id="opcoes">
 
-                    <select id="itens">
-                        <input type="checkbox">chocolate
-                        <input type="checkbox">baunilha
-                        <input type="checkbox">pistache
-                        <input type="checkbox">flocos
-                        <input type="checkbox">doce de leite
-                        <input type="checkbox">coco
-                        <input type="checkbox">café
-                        <input type="checkbox">limão siciliano
-                        <input type="checkbox">Morango
-                        <input type="checkbox">Manga
-                        <input type="checkbox">Abacaxi
-                        <input type="checkbox"> Maracujá
-                        <input type="checkbox">Limão Siciliano
-                        <input type="checkbox">Uva
-                        <input type="checkbox">Framboesa
-                        <input type="checkbox">Açaí
-                        <input type="checkbox">Melancia
-                        <input type="checkbox">Goiaba
-                        <input type="checkbox">Tangerina
-                        <input type="checkbox">Cupuaçu
-                    </select>
+                    <label id="itens-casquinha">
+                        <input type="checkbox" name="sabor">Chocolate
+                        <input type="checkbox" name="sabor">Baunilha
+                        <input type="checkbox" name="sabor">Pistache
+                        <input type="checkbox" name="sabor">Flocos
+                        <input type="checkbox" name="sabor">Doce de leite
+                        <input type="checkbox" name="sabor">Coco
+                        <input type="checkbox" name="sabor">Café
+                        <input type="checkbox" name="sabor">Limão siciliano
+                        <input type="checkbox" name="sabor">Morango
+                        <input type="checkbox" name="sabor">Manga
+                        <input type="checkbox" name="sabor">Abacaxi
+                        <input type="checkbox" name="sabor">Maracujá
+                        <input type="checkbox" name="sabor">Limão Siciliano
+                        <input type="checkbox" name="sabor">Uva
+                        <input type="checkbox" name="sabor">Framboesa
+                        <input type="checkbox" name="sabor">Açaí
+                        <input type="checkbox" name="sabor">Melancia
+                        <input type="checkbox" name="sabor">Goiaba
+                        <input type="checkbox" name="sabor">Tangerina
+                        <input type="checkbox" name="sabor">Cupuaçu
 
-                </p>
+                        <select name="opcoes-tamanhos" id="tamanhos-casq">
+                            <option value="300">2 bolas</option>
+                            <option value="400">3 bolas</option>
+                            <option value="500">4 bolas</option>
+                        </select>
+                    </label>
+                </div>
+
                 <br>
-                <span id="valor">Valor: R$12,00</span>
-                <button id="adicionar">Adicionar ao carrinho</button>
+                <span class="valor">Valor: R$12,00</span>
+                <button class="mais">Mais opções</button>
+                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
             </div>
 
-            <div id="sec-prod">
+            <div class="sec-prod">
                 <img src="folder/mão-pote.jpg" alt="mão no pote de sorvete" id="mão-pote" loading="lazy">
-                <h3 id="nome">Pote de sorvete - selfservice</h3>
+                <h3 class="nome">Sorvete no pote - selfservice</h3>
                 <p>Descrição: Conta com diferentes sabores, como chocolate,
                     baunilha, morango e pistache, e é vendido em tamanhos variados, de 300 ml a 700ml. Ideal
                     para
                     consumo doméstico ou comercial, sua embalagem facilita o transporte e a conservação.
                 </p>
-                <select id="itens">
-                    <input type="checkbox">chocolate
-                    <input type="checkbox">baunilha
-                    <input type="checkbox">pistache
-                    <input type="checkbox">flocos
-                    <input type="checkbox">doce de leite
-                    <input type="checkbox">coco
-                    <input type="checkbox">café
-                    <input type="checkbox">limão siciliano
-                    <input type="checkbox">Morango
-                    <input type="checkbox">Manga
-                    <input type="checkbox">Abacaxi
-                    <input type="checkbox"> Maracujá
-                    <input type="checkbox">Limão Siciliano
-                    <input type="checkbox">Uva
-                    <input type="checkbox">Framboesa
-                    <input type="checkbox">Açaí
-                    <input type="checkbox">Melancia
-                    <input type="checkbox">Goiaba
-                    <input type="checkbox">Tangerina
-                    <input type="checkbox">Cupuaçu
-                </select>
-
+                <div id="opcoes">
+                    <label id="itens-pote">
+                        <input type="checkbox" name="sabor">Chocolate
+                        <input type="checkbox" name="sabor">Baunilha
+                        <input type="checkbox" name="sabor">Pistache
+                        <input type="checkbox" name="sabor">Flocos
+                        <input type="checkbox" name="sabor">Doce de leite
+                        <input type="checkbox" name="sabor">Coco
+                        <input type="checkbox" name="sabor">Café
+                        <input type="checkbox" name="sabor">Limão siciliano
+                        <input type="checkbox" name="sabor">Morango
+                        <input type="checkbox" name="sabor">Manga
+                        <input type="checkbox" name="sabor">Abacaxi
+                        <input type="checkbox" name="sabor">Maracujá
+                        <input type="checkbox" name="sabor">Limão Siciliano
+                        <input type="checkbox" name="sabor">Uva
+                        <input type="checkbox" name="sabor">Framboesa
+                        <input type="checkbox" name="sabor">Açaí
+                        <input type="checkbox" name="sabor">Melancia
+                        <input type="checkbox" name="sabor">Goiaba
+                        <input type="checkbox" name="sabor">Tangerina
+                        <input type="checkbox" name="sabor">Cupuaçu
+                    </label>
+                </div>
                 <br>
-                <span id="valor">Valor: R$34,00/kg</span>
-                <button id="adicionar">Adicionar ao carrinho</button>
+                <span class="valor">Valor: R$34,00/kg</span>
+                <button class="mais">Mais opções</button>
+                <button class="adicionar" onclick="carrinho()">Adicionar ao
+                    carrinho</button>
             </div>
 
-            <div id="sec-prod">
+            <div class="sec-prod">
                 <img src="folder/picolé-fruta.jpg" alt="picolé-fruta" id="picole-fruta" loading="lazy">
-                <h3 id="nome">Picolés de fruta</h3>
+                <h3 class="nome">Picolés de fruta</h3>
                 <p>Descrição: Os picolés de fruta são sobremesas geladas feitas à base de suco ou polpa de
                     frutas
                     naturais, proporcionando um sabor refrescante e nutritivo. Eles podem conter pedaços de
                     fruta,
                     açúcar ou adoçantes naturais, e são congelados em moldes individuais para consumo prático.
                 </p>
-                <select id="itens">
-                    <input type="checkbox">coco
-                    <input type="checkbox">limão siciliano
-                    <input type="checkbox">Morango
-                    <input type="checkbox">Manga
-                    <input type="checkbox">Abacaxi
-                    <input type="checkbox"> Maracujá
-                    <input type="checkbox">Limão Siciliano
-                    <input type="checkbox">Uva
-                    <input type="checkbox">Framboesa
-                    <input type="checkbox">Açaí
-                    <input type="checkbox">Melancia
-                    <input type="checkbox">Goiaba
-                    <input type="checkbox">Tangerina
-                    <input type="checkbox">Cupuaçu
-                </select>
-
+                <div id="opcoes">
+                    <label id="itens-picole">
+                        <input type="checkbox" name="sabor">Coco
+                        <input type="checkbox" name="sabor">Limão siciliano
+                        <input type="checkbox" name="sabor">Morango
+                        <input type="checkbox" name="sabor">Manga
+                        <input type="checkbox" name="sabor"> Abacaxi
+                        <input type="checkbox" name="sabor">Maracujá
+                        <input type="checkbox" name="sabor">Limão Siciliano
+                        <input type="checkbox" name="sabor">Uva
+                        <input type="checkbox" name="sabor">Framboesa
+                        <input type="checkbox" name="sabor">Açaí
+                        <input type="checkbox" name="sabor">Melancia
+                        <input type="checkbox" name="sabor">Goiaba
+                        <input type="checkbox" name="sabor">Tangerina
+                        <input type="checkbox" name="sabor">Cupuaçu
+                        </select>
+                </div>
                 <br>
-                <span id="valor">Valor: R$2,50</span>
-                <button id="adicionar">Adicionar ao carrinho</button>
+                <span class="valor">Valor: R$2,50</span>
+                <button class="mais">Mais opções</button>
+                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
             </div>
 
-            <div id="sec-prod">
+            <div class="sec-prod">
                 <img src="folder/sorbet.jpg" alt="sorbet com frutas no pote" id="sorbet-img" loading="lazy">
-                <h3 id="nome">Sorbet </h3>
+                <h3 class="nome">Sorbet </h3>
                 <p>Descrição: O sorbet é uma sobremesa gelada feita à base de frutas, água e açúcar, sem adição
                     de
                     laticínios, garantindo uma textura leve e refrescante. Porção de 500ml. Aqui estão alguns
                     sabores
                     populares:
                 </p>
-                <select id="itens">
-                    <input type="checkbox">Morango
-                    <input type="checkbox">Manga
-                    <input type="checkbox">Abacaxi
-                    <input type="checkbox"> Maracujá
-                    <input type="checkbox">Limão Siciliano
-                    <input type="checkbox">Uva
-                    <input type="checkbox">Framboesa
-                    <input type="checkbox">Açaí
-                    <input type="checkbox">Melancia
-                    <input type="checkbox">Goiaba
-                    <input type="checkbox">Tangerina
-                    <input type="checkbox">Cupuaçu
-                </select>
+                <div id="opcoes">
+                    <label id="itens-sorbet">
+                        <ul><input type="checkbox" name="sabor">Morango</ul>
+                        <ul><input type="checkbox" name="sabor">Manga</ul>
+                        <ul> <input type="checkbox" name="sabor">Abacaxi</ul>
+                        <ul><input type="checkbox" name="sabor"> Maracujá</ul>
+                        <ul><input type="checkbox" name="sabor">Limão Siciliano</ul>
+                        <ul><input type="checkbox" name="sabor">Uva</ul>
+                        <br>
+                        <ul><input type="checkbox" name="sabor">Framboesa</ul>
+                        <ul><input type="checkbox" name="sabor">Açaí</ul>
+                        <ul><input type="checkbox" name="sabor">Melancia</ul>
+                        <ul><input type="checkbox" name="sabor">Goiaba</ul>
+                        <ul><input type="checkbox" name="sabor">Tangerina</ul>
+                        <ul><input type="checkbox" name="sabor">Cupuaçu</ul>
+                    </label>
+                </div>
                 <br>
-                <span id="valor">Valor: R$20,50</span>
-                <button id="adicionar">Adicionar ao carrinho</button>
-                <button id="mais" onclick="leiaMais()">Mais opções</button>
+                <span class="valor">Valor: R$20,50</span>
+                <button class="mais">Mais opções</button>
+                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
             </div>
 
         </main>

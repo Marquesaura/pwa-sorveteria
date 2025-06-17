@@ -44,18 +44,6 @@ window.addEventListener('load', () => {
   }, 1100);
 });
 
-// carrinho
-// document.getElementById('adicionar').addEventListener('click',
-//   function () {
-
-//       const itemSelecionado = document.getElementById('item').value;
-
-//       if (itemSelecionado) {
-//           const listaCompras = document.getElementById('lista-compras');
-//           console.log(listaCompras)
-//       }
-//   });
-
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js').
@@ -67,39 +55,85 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-//teste
 
+document.querySelectorAll(".mais").forEach(botao => {
+  let aberto = false;
+  const secaoProduto = botao.closest(".sec-prod");
+  const opcoes = secaoProduto.querySelector("#opcoes");
 
-function adicionarAoCarrinho(nome, preco) {
-  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-  var nome = document.getElementById("nome")
-  const itemExistente = carrinho.find(item => item.nome === nome);
+  botao.addEventListener("click", () => {
+    if (!aberto) {
 
-  if (itemExistente) {
-    itemExistente.quantidade++;
-  } else {
-    carrinho.push({ nome, preco, quantidade: 1 });
-  }
+      document.querySelectorAll(".sec-prod").forEach(sec => {
+        const outrasOpcoes = sec.querySelector("#opcoes");
+        const outroBotao = sec.querySelector(".mais");
+        outrasOpcoes.style.display = "none";
+        outroBotao.textContent = "Mais opções";
+      });
 
-  localStorage.setItem('carrinho', JSON.stringify(carrinho));
-  alert(`${nome} adicionado ao carrinho!`);
-}
-
-document.addEventListener({
-
-})
-
-function leiaMais(){
-document.getElementById("mais").addEventListener('click', () => {
-  const itens = document.getElementById("itens");
-  const btnLeiaMais = document.getElementById("mais");
-
-  if (itens.style.display === "none" || itens.style.display === "") {
-    itens.style.display = "inline";
-    btnLeiaMais.innerHTML = "Voltar";
-  } else {
-    itens.style.display = "none";
-    btnLeiaMais.innerHTML = "Leia mais";
-  }
+      opcoes.style.display = "block";
+      botao.textContent = "Voltar";
+      aberto = true;
+    } else {
+  
+      opcoes.style.display = "none";
+      botao.textContent = "Mais opções";
+      aberto = false;
+    }
+  });
 });
+
+
+function carrinho() {
+  const botoesAdicionar = document.querySelectorAll(".adicionar");
+  const produtos = document.querySelectorAll(".sec-prod");
+
+  botoesAdicionar.forEach((botao, index) => {
+    botao.addEventListener("click", () => {
+      const produto = produtos[index];
+      const nome = produto.querySelector(".nome").innerText;
+      const preco = produto.querySelector(".valor").innerText;
+
+      // Apenas checkboxes DENTRO deste produto
+      const checkboxes = produto.querySelectorAll('input[type="checkbox"]');
+      const saboresSelecionados = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.nextSibling.textContent?.trim() || cb.parentElement.textContent.trim());
+
+      // Se houver checkboxes e nenhum estiver marcado, bloquear
+      if (checkboxes.length > 0 && saboresSelecionados.length === 0) {
+        alert("Por favor, selecione ao menos um sabor.");
+        return;
+      }
+
+      // Select de tamanho (se existir)
+      const select = produto.querySelector("select");
+      const tamanho = select ? select.options[select.selectedIndex].text : "";
+
+      // Montar texto do carrinho
+      let texto = `${nome} - ${preco}`;
+      if (tamanho) texto += ` - Tamanho: ${tamanho}`;
+      if (saboresSelecionados.length > 0) texto += ` - Sabores: ${saboresSelecionados.join(", ")}`;
+
+      // Criar item no carrinho
+      const itemCarrinho = document.createElement("p");
+      itemCarrinho.textContent = texto;
+      itemCarrinho.style.backgroundColor = "#f0dfc8";
+      itemCarrinho.style.color = "#795833";
+      itemCarrinho.style.borderRadius = "10px";
+      itemCarrinho.style.padding = "5px";
+      itemCarrinho.style.margin = "5px 0";
+
+      // Adicionar ao carrinho
+      document.getElementById("carrinho").appendChild(itemCarrinho);
+    });
+  });
 }
+
+
+
+
+
+// function excluirItem(){
+
+// }
