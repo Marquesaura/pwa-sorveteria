@@ -29,3 +29,12 @@ Aplicativo web progressivo desenvolvido para a sorveteria Glace, com foco em ace
 ├── star.png
 └── ... (outros arquivos de imagem)
 
+Observações
+Projeto acadêmico em desenvolvimento
+
+Algumas funcionalidades podem ser simuladas
+
+PWA funcional em navegadores com suporte moderno (Chrome, Edge, etc.)
+
+
+
