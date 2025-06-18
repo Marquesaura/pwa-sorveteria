@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   showImage(currentIndex);
-
 });
 
 window.addEventListener('load', () => {
@@ -82,7 +81,6 @@ document.querySelectorAll(".mais").forEach(botao => {
     }
   });
 });
-
 
 function carrinho(produto, tamanho, valor, sabor) {
 
