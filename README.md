@@ -1,4 +1,4 @@
-# PWA-Cleide
+# PWA-Sorveteria
 
 Aplicativo web progressivo desenvolvido para a sorveteria Glace, com foco em acessibilidade, performance e experiência do usuário. O projeto simula uma vitrine digital com funcionalidades como seleção de produtos, sabores, tamanhos e carrinho de compras, adaptado para funcionar offline como um app nativo.
 
