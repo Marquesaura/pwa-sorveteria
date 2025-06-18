@@ -32,9 +32,9 @@ body {
     cursor: pointer;
     font-size: 22px;
     height: 33px;
-    text-decoration: underline #000000;
-    transition: 0.4s;
     color: #51abb2;
+    transition: 0.5s;
+    border-color: left #51abb2;
 }
 
 #logo {
@@ -54,7 +54,7 @@ body {
 
 footer {
     margin-bottom: -4%;
-    margin-top: 45%;
+    margin-top: 2rem;
 }
 
 #boas-vindas {
@@ -120,35 +120,51 @@ footer {
 /*produto.html */
 .sec-prod {
     background-color: #f0dfc8;
-    margin: 30px;
+    margin: 30px 30px 10px 4%;
     padding: 10px;
     border-radius: 20px;
-    width: 27%;
+    width: 25%;
     display: inline-block;
-    min-height: 400px;
+    min-height: 580px;
     vertical-align: top;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
 }
+
 .sec-prod img {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 300px;
     object-fit: cover;
     padding: -20px;
     border-radius: 10px;
     align-items: center;
-    margin-left: 23%;
+    margin-left: 13%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-.sec-prod:hover{
-    width: 27.8%;
+
+.sec-prod:hover {
     background-color: #e7cfa9;
     transition: 0.4s;
-    margin: 25px;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
-#nome{
-    margin-left: 22%;
+
+.sec-prod p {
+    margin: 10px;
+    font-size: 17px;
+    margin-bottom: 40px;
+
 }
-ul{
+
+.nome {
+    margin-left: 30%;
+    font-size: 30px;
+}
+
+ul {
     text-decoration: none;
 }
+
 p {
     font-size: 20px;
     text-align: center;
@@ -167,34 +183,45 @@ p {
     padding: 10px;
 }
 
-#opcoes{
+.opcoes {
     display: none;
     font-size: 20px;
     color: #795833;
     margin: 20px;
     border-radius: 10px;
+
 }
-#opcoes input{
-    padding-right: 10px;
-    margin-left: 10%;
-    margin-right: 10%;
+
+.opcoes input {
+    margin: 0.5rem 1rem 0.5rem 0;
 }
-#tamanhos{
+
+.tamanhos {
     font-size: 20px;
     color: #795833;
     margin-left: 40%;
     border-radius: 10px;
 }
-.mais{
+
+.mais {
     width: 110px;
     font-size: 15px;
     background-color: #ffb1a5;
-    padding: 7px; 
-    margin: 10px;
-    margin-left: 70%;
+    padding: 7px;
+    margin: 0;
+    margin-bottom: 30px;
+    margin-left: 36%;
     border-radius: 10px;
     border-color: #ffb1a5;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
+
+.mais:hover {
+    background-color: #f06;
+    transform: scale(1.05);
+}
+
 /*carrossel*/
 nav a {
     margin: 0 1rem;
@@ -231,21 +258,21 @@ section {
 }
 
 .carousel-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  pointer-events: none;
-  border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    border-radius: 10px;
 }
 
 .carousel-img.active {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 
@@ -254,28 +281,50 @@ section {
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#carousel button:hover {
+    background-color: #f06;
+    transform: scale(1.1);
 }
 
 /* carrinho */
-.adicionar{
+.adicionar {
     width: 205px;
     font-size: 17px;
     background-color: #f06;
-    padding: 10px; 
+    padding: 10px;
     margin: 20px;
     margin-left: 22%;
     border-radius: 10px;
     border-color: #f06;
-   
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
 }
 
-#valor{
-margin-bottom: -50px;
-text-align: left;
-margin-left: 250px;
+.adicionar:hover {
+    background-color: #d05;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.valor {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 32%;
+    font-size: 20px;
+    background-color: #f0dfc8;
+    border-radius: 10px;
+    padding: 10px;
+    color: #795833;
+    box-shadow: 2px 2px 3px #795833;
 }
 
 
@@ -288,103 +337,617 @@ margin-left: 250px;
 
 
 #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #51abb2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #51abb2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
 
 @keyframes zoomIn {
-  from {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  to {
-    transform: scale(2.3);
-    opacity: 1;
-  }
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(2.3);
+        opacity: 1;
+    }
 }
 
 #loader-logo {
-  width: 100px;
-  transition: transform 0.4s ease;
-  animation: zoomIn 2s ease forwards;
+    width: 100px;
+    transition: transform 0.4s ease;
+    animation: zoomIn 2s ease forwards;
+}
+
+/* avaliacao.html*/
+.avaliacao-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.avaliacao-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avaliacao-header h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.avaliacao-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.estrelas-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.estrelas {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.estrela {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ddd;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.estrela.ativa {
+    color: #f39c12;
+}
+
+.estrela:hover,
+.estrela:hover~.estrela {
+    color: #f39c12;
+}
+
+.estrela:hover {
+    transform: scale(1.1);
+}
+
+.categoria-avaliacao {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.categoria-avaliacao h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.produtos-selecionados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.produto-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produto-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.produto-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.produto-item h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.produto-item p {
+    margin: 0.25rem 0 0 0;
+    color: #7f8c8d;
+    font-size: 0.8rem;
+}
+
+.btn-enviar {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}
+
+.mensagem-sucesso {
+    background: #d4edda;
+    color: #155724;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    text-align: center;
+    display: none;
+}
+
+.comentario-opcional {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-top: 0.5rem;
 }
 
 
+
+/* Mobile (até 768px) */
 @media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem !important;
+    }
+
+    #logo {
+        width: 120px !important;
+    }
+
     #secao-canto {
-        width: 16%;
-        height: 16%;
-        margin-left: 78%;
-        margin-top: -200px;
-        font-size: 30px;
-    }
-
-    #banner-sorvetes {
-        height: auto;
-        width: 42%;
-        margin-top: 200px;
-        margin-left: -80px;
-        object-fit: cover;
-    }
-
-    #inicio {
-        margin-top: -570px;
-        width: 75%;
-        margin-left: 250px;
-    }
-
-    #boas-vindas {
-        margin-top: -520px;
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 1rem 0 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        min-height: auto !important;
+        font-size: 0.9rem !important;
+        padding: 0.75rem !important;
     }
 
     #estrela {
-        width: 45px;
-        height: auto;
+        height: 20px !important;
     }
 
-    #experimente-h2 {
-        width: 550px;
-        font-size: 40px;
-        margin-left: 40px;
+    #inicio {
+        padding: 1rem !important;
+        margin-top: 0 !important;
     }
 
-    #milk-shakes-sabores,
-    #sorvete-derretendo,
-    #mão-pote,
-    #picole-fruta {
-        display: none;
+    #boas-vindas {
+        font-size: 1.8rem !important;
+        margin-top: 0 !important;
     }
 
-    #milkshake-pretzel {
-        margin-top: 200px;
+    #texto-inicial {
+        font-size: 1rem !important;
+        padding: 1rem !important;
+    }
 
+    #anuncio-sorvetes {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+    }
+
+    #experimente-h2,
+    #saudavel-h2 {
+        font-size: 1.5rem !important;
+        margin: 1rem 0 !important;
     }
 
     #anuncio-sorvetes img {
-        width: 500px;
-        height: 500px;
-        object-fit: cover;
-        align-items: center;
-        margin-left: 60px;
+        height: 250px !important;
     }
 
-    footer p {
-        align-items: center;
-        margin-left: 40px;
-        width: 550px;
-        margin-bottom: 40px;
+    #produtos {
+        padding: 1rem !important;
+    }
+
+    #produtos h2 {
+        font-size: 2rem !important;
+    }
+
+    #carousel {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+
+    #carousel-container {
+        height: 250px !important;
+    }
+
+    #carousel button {
+        padding: 0.75rem 1rem !important;
+        font-size: 1.2rem !important;
+    }
+
+    #menu {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+    }
+
+    .sec-prod {
+        min-height: auto !important;
+        padding: 1rem !important;
+    }
+
+    .sec-prod img {
+        height: 200px !important;
+    }
+
+    .nome {
+        font-size: 1.3rem !important;
+    }
+
+    .sec-prod p {
+        font-size: 0.9rem !important;
+    }
+
+    .opcoes {
+        font-size: 0.9rem !important;
+    }
+
+    .tamanhos {
+        font-size: 0.9rem !important;
+    }
+
+    .mais {
+        width: 100px !important;
+        font-size: 0.9rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+
+    .adicionar {
+        font-size: 1rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .valor {
+        font-size: 1rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .avaliacao-container {
+        margin: 1rem !important;
+        padding: 1rem !important;
+    }
+
+    .avaliacao-header h1 {
+        font-size: 2rem !important;
+    }
+
+    .avaliacao-header p {
+        font-size: 1rem !important;
+    }
+
+    .form-group label {
+        font-size: 1rem !important;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.75rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .estrela {
+        font-size: 1.5rem !important;
+    }
+
+    .categoria-avaliacao {
+        padding: 1rem !important;
+    }
+
+    .categoria-avaliacao h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .produtos-selecionados {
+        grid-template-columns: 1fr !important;
+    }
+
+    .btn-enviar {
+        font-size: 1rem !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+
+    footer {
+        padding: 1rem !important;
     }
 
     #logo-footer {
-        margin-left: 206px;
+        width: 100px !important;
     }
+
+    footer p {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media screen and (max-width: 480px) {
+    #logo {
+        width: 100px !important;
+    }
+
+    #secao-canto {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    #boas-vindas {
+        font-size: 1.5rem !important;
+    }
+
+    #texto-inicial {
+        font-size: 0.9rem !important;
+        padding: 0.75rem !important;
+    }
+
+    #experimente-h2,
+    #saudavel-h2 {
+        font-size: 1.3rem !important;
+    }
+
+    #anuncio-sorvetes img {
+        height: 200px !important;
+    }
+
+    #produtos h2 {
+        font-size: 1.5rem !important;
+    }
+
+    #carousel-container {
+        height: 200px !important;
+    }
+
+    .sec-prod img {
+        height: 180px !important;
+    }
+
+    .nome {
+        font-size: 1.1rem !important;
+    }
+
+    .sec-prod p {
+        font-size: 0.8rem !important;
+    }
+
+    .avaliacao-header h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .estrela {
+        font-size: 1.2rem !important;
+    }
+
+    .btn-enviar {
+        font-size: 0.9rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    #logo-footer {
+        width: 80px !important;
+    }
+}
+
+/* Tablet (até 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    #secao-canto {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 1rem 0 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 2rem !important;
+        min-height: auto !important;
+    }
+
+    #inicio {
+        padding: 1rem !important;
+    }
+
+    #boas-vindas {
+        font-size: 2rem !important;
+    }
+
+    #texto-inicial {
+        font-size: 1.1rem !important;
+    }
+
+    #experimente-h2,
+    #saudavel-h2 {
+        font-size: 2rem !important;
+    }
+
+    #menu {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+        gap: 1.5rem !important;
+        padding: 1rem !important;
+    }
+
+    .sec-prod {
+        min-height: 550px !important;
+    }
+
+    #carousel-container {
+        height: 300px !important;
+    }
+
+    .estrela {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Landscape mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #preloader {
+        position: relative !important;
+        height: 100vh !important;
+    }
+
+    #inicio {
+        margin-top: 0 !important;
+    }
+
+    #anuncio-sorvetes {
+        margin-top: 1rem !important;
+    }
+
+    .avaliacao-container {
+        margin: 1rem auto !important;
+    }
+
+    header {
+        padding: 0.5rem !important;
+    }
+
+    #secao-canto {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 0.5rem 0 !important;
+        flex-direction: row !important;
+        gap: 1rem !important;
+        min-height: auto !important;
+        padding: 0.5rem !important;
+    }
+}
+
+/* Desktop and larger screens */
+@media screen and (min-width: 1025px) {
+
+    /* Desktop styles are already in the main CSS */
+    /* This ensures proper scaling for very large screens */
+    .avaliacao-container {
+        max-width: 900px;
+    }
+
+    #menu {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi) {
+
+    #logo,
+    #logo-footer,
+    #estrela {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles */
+@media print {
+
+    header,
+    footer,
+    #preloader,
+    .mais,
+    .adicionar,
+    .btn-enviar {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .avaliacao-container {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+
+    .sec-prod {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+#produtos {
+    margin-bottom: 0;
 }

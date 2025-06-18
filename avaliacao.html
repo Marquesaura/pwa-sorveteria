@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="site.webmanifest">
+    <title>Avaliação - Glace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <link rel="icon" type="image/png" href="folder/Glace.png">
+</head>
+<body>
+    <header>
+        <img src="folder/Glace.png" alt="logo" id="logo">
+        <div id="secao-canto">
+            <a href="index.html">Início</a> <br>
+            <a href="produto.html">Produtos</a> <br>
+            <a href="unidades.html">Unidades</a> <br>
+            <a href="avaliacao.html"> <img src="folder/star.png" alt="estrela" id="estrela"></a>
+        </div>
+    </header>
+
+    <div class="avaliacao-container">
+        <div class="avaliacao-header">
+            <h1>Avalie seu Pedido</h1>
+            <p>Conte-nos como foi sua experiência com nossos produtos!</p>
+        </div>
+
+        <form id="form-avaliacao">
+            <div class="form-group">
+                <label for="numero-pedido">Número do Pedido *</label>
+                <input type="text" id="numero-pedido" name="numero-pedido" required placeholder="Ex: GL2024001">
+            </div>
+
+            <div class="form-group">
+                <label for="nome-cliente">Seu Nome *</label>
+                <input type="text" id="nome-cliente" name="nome-cliente" required placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            </div>
+
+            <div class="categoria-avaliacao">
+                <h3>Produtos do Pedido</h3>
+                <div class="produtos-selecionados" id="produtos-selecionados">
+                    <!-- Produtos serão carregados dinamicamente -->
+                </div>
+            </div>
+
+            <div class="categoria-avaliacao">
+                <h3>Avaliação Geral</h3>
+                <div class="estrelas-container">
+                    <span>Avaliação:</span>
+                    <div class="estrelas" id="estrelas-geral">
+                        <span class="estrela" data-valor="1">★</span>
+                        <span class="estrela" data-valor="2">★</span>
+                        <span class="estrela" data-valor="3">★</span>
+                        <span class="estrela" data-valor="4">★</span>
+                        <span class="estrela" data-valor="5">★</span>
+                    </div>
+                    <span id="valor-estrelas">0/5</span>
+                </div>
+            </div>
+
+            <div class="categoria-avaliacao">
+                <h3>Qualidade dos Produtos</h3>
+                <div class="estrelas-container">
+                    <span>Qualidade:</span>
+                    <div class="estrelas" id="estrelas-qualidade">
+                        <span class="estrela" data-valor="1">★</span>
+                        <span class="estrela" data-valor="2">★</span>
+                        <span class="estrela" data-valor="3">★</span>
+                        <span class="estrela" data-valor="4">★</span>
+                        <span class="estrela" data-valor="5">★</span>
+                    </div>
+                    <span id="valor-qualidade">0/5</span>
+                </div>
+            </div>
+
+            <div class="categoria-avaliacao">
+                <h3>Atendimento e Entrega</h3>
+                <div class="estrelas-container">
+                    <span>Atendimento:</span>
+                    <div class="estrelas" id="estrelas-atendimento">
+                        <span class="estrela" data-valor="1">★</span>
+                        <span class="estrela" data-valor="2">★</span>
+                        <span class="estrela" data-valor="3">★</span>
+                        <span class="estrela" data-valor="4">★</span>
+                        <span class="estrela" data-valor="5">★</span>
+                    </div>
+                    <span id="valor-atendimento">0/5</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comentario">Comentários Adicionais</label>
+                <textarea id="comentario" name="comentario" rows="4" placeholder="Conte-nos mais sobre sua experiência... (opcional)"></textarea>
+                <p class="comentario-opcional">Seus comentários nos ajudam a melhorar nossos produtos e serviços!</p>
+            </div>
+
+            <div class="form-group">
+                <label for="recomendaria">Você recomendaria a Glace para amigos?</label>
+                <select id="recomendaria" name="recomendaria" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="sim">Sim, definitivamente!</option>
+                    <option value="provavelmente">Provavelmente</option>
+                    <option value="talvez">Talvez</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Avaliação</button>
+        </form>
+
+        <div class="mensagem-sucesso" id="mensagem-sucesso">
+            <h3>Avaliação Enviada com Sucesso!</h3>
+            <p>Obrigado por compartilhar sua experiência conosco. Sua opinião é muito importante para continuarmos melhorando nossos produtos e serviços.</p>
+        </div>
+    </div>
+
+    <footer>
+        <img src="folder/Glace.png" alt="logo" id="logo-footer">
+        <p>&copy; 2025 Glace Sorvetes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="avaliacao.js"></script>
+</body>
+</html>
