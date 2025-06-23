@@ -1,5 +1,3 @@
-const { createElement } = require("react");
-
 document.addEventListener('DOMContentLoaded', () => {
   const images = document.querySelectorAll('.carousel-img');
   const prevBtn = document.getElementById('prev');
