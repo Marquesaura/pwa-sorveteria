@@ -335,16 +335,42 @@
                 <button class="mais">Mais opções</button>
             </div>
         </main>
-        <section id="carrinho">
-            <button id="excluir"> excluir</button>
+        
+            <button class="excluir" onclick="removerCarrinho()">Excluir</button>
             <button id="adicionar-mais">adicionar</button>
-            <button id="finalizar">finalizar</button>
+        <section id="carrinho" style="width: 500px;">
+            <h2>Carrinho</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody id="itens-final">
+                </tbody>
+                <tfoot >
+                    <tr>
+                        <td colspan="3">
+                            <strong id="valorTotal">Total</strong>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <button type="button" id="finalizar">finalizar</button>
         </section>
+
+
+
         <footer>
             <img src="folder/Glace.png" alt="logo" id="logo-footer">
             <p>&copy; 2025 Glace Sorvetes. Todos os direitos reservados.</p>
         </footer>
         <script src="script.js"></script>
+        <script src="carrinho.js"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prevBtn.style.backgroundColor = 'purple';
     setTimeout(() => {
       prevBtn.style.backgroundColor = '#ffb1a5';
-    }, 600);
+    }, 400);
   });
 
   nextBtn.addEventListener('click', () => {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.style.backgroundColor = 'purple';
     setTimeout(() => {
       nextBtn.style.backgroundColor = '#ffb1a5';
-    }, 600);
+    }, 400);
   });
 
   showImage(currentIndex);
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
   if (preloader) {
-    preloader.style.transition = 'opacity 1s ease';
     preloader.style.opacity = '0';
     setTimeout(() => {
       preloader.style.display = 'none';
@@ -131,34 +130,6 @@ function carrinho() {
 
     });
   });
-}
-
-function removerCarrinho() {
-  let valorFinal = 0;
-  const mostraValorFinal = document.getElementById("valorTotal");
-
-  // Atualiza a exibição do valor total, se o elemento existir
-  if (mostraValorFinal) {
-    mostraValorFinal.textContent = `Total: R$ ${valorFinal.toFixed(2)}`;
-  }
-
-  // Seleciona todos os botões de remoção; 
-  // Certifique-se de que os botões tenham a classe "excluir" no HTML
-  const btnExcluir = document.querySelectorAll(".excluir");
-
-  // Adiciona o event listener para remover o produto ao clicar
-  btnExcluir.forEach((btn) => {
-    btn.addEventListener("click", removeProduct);
-  });
-
-  // Caso haja um botão para finalizar a compra, adiciona um listener para ele
-  const btnFinalizar = document.getElementById("finalizar");
-  if (btnFinalizar) {
-    btnFinalizar.addEventListener("click", () => {
-      window.alert("Compra finalizada com total de R$", valorFinal.toFixed(2));
-      // Aqui você pode adicionar a lógica para finalizar a compra
-    });
-  }
 }
 
 document.addEventListener('DOMContentLoaded', carrinho, removerCarrinho);

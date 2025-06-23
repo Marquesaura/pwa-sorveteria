@@ -10,6 +10,15 @@ body {
     background-color: #51abb2;
 }
 
+#preloader {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
 #secao-canto {
     background-color: #f0dfc8;
     margin-left: 90%;
