@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="folder/Glace.png" type="image/x-icon">
+
+    <title>Finalizar compra</title>
+</head>
+
+<body>
+    <header>
+        <div id="preloader">
+            <img src="folder/logo-sem-fundo.png" alt="Carregando..." id="loader-logo">
+        </div>
+    </header>
+
+
+    <section id="carrinho-final">
+        <h2>Carrinho</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Preço</th>
+                    <th>Sabor</th>
+                    <th>Tamanho</th>
+                </tr>
+            </thead>
+            <tbody id="itens-final">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <strong id="valorTotal">Total</strong>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <button type="button" id="finalizarCompra">Finalizar compra</button>
+        <div id="pagamentos-final">
+            <h4>Forma de pagamento:</h4>
+            <label for="pagamento-final" id="pag-final">
+                <input type="radio" value="pix" name="formas-pagamento">Pix
+                <input type="radio" value="cartao" name="formas-pagamento">Cartão
+                <input type="radio" value="boleto" name="formas-pagamento">Boleto
+                <input type="radio" value="dinheiro" name="formas-pagamento">Dinheiro
+            </label>
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <img src="folder/Glace.png" alt="logo" id="logo-footer">
+        <p>&copy; 2025 Glace Sorvetes. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="carrinho.js"></script>
+</body>
+
+</html>

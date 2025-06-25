@@ -75,7 +75,71 @@ if ('serviceWorker' in navigator) {
       console.log('Falha ao registrar o Service Worker:', error);
     });
 }
-function popUpPag(){
-  window.open('produto.html', "pagamento", "width=500,height=600");
-  document.getElementById("produtos").style.display = "none "
+function popUpPag() {
+  const largura = 600;
+  const altura = 700;
+  const esquerda = (screen.width - largura) / 2;
+  const topo = (screen.height - altura) / 2;
+
+  window.open(
+    "final.html",
+    "telaPagamento",
+    `width=${largura},height=${altura},left=${esquerda},top=${topo},resizable=no`
+  );
+  const produtosSelecionados = [];
+
+  document.querySelectorAll("#itens-final tr").forEach(linha => {
+    const colunas = linha.querySelectorAll("td");
+    produtosSelecionados.push({
+      nome: colunas[0]?.textContent,
+      preco: colunas[1]?.textContent,
+      sabores: colunas[2]?.textContent,
+      tamanho: colunas[3]?.textContent
+    });
+  });
+
+  localStorage.setItem("carrinho", JSON.stringify(produtosSelecionados));
+  // window.location.href = "final.html";
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  const carrinhoSalvo = localStorage.getItem("carrinho");
+  let valorTotal = 0;
+  if (carrinhoSalvo) {
+    const produtos = JSON.parse(carrinhoSalvo);
+    const tabela = document.getElementById("itens-final");
+    produtos.forEach(produto => {
+      const linha = document.createElement("tr");
+      linha.innerHTML = `
+        <td>${produto.nome}</td>
+        <td>${produto.preco}</td>
+        <td>${produto.sabores}</td>
+        <td>${produto.tamanho}</td>
+      `;
+      tabela.appendChild(linha);
+      
+      const precoNum = parseFloat(produto.preco.replace("R$", "").replace(",", "."));
+      if (!isNaN(precoNum)) valorTotal += precoNum;
+    });
+    
+    const mostraValorFinal = document.getElementById("valorTotal");
+    mostraValorFinal.textContent = `Total: R$${valorTotal.toFixed(2)}`;
+  }
+
+  const btnFinalizar = document.getElementById("finalizarCompra");
+  const pagamentos = document.getElementById("pagamentos-final");
+  if (btnFinalizar && pagamentos) {
+    btnFinalizar.addEventListener("click", () => {
+      if (pagamentos.style.display === "block") {
+        pagamentos.style.display = "none";
+        btnFinalizar.textContent = "Finalizar compra";
+      } else {
+        pagamentos.style.display = "block";
+        btnFinalizar.textContent = "Voltar";
+      }
+    });
+  }
+});
+window.addEventListener("DOMContentLoaded", () => {
+  localStorage.clear();
+});
