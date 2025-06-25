@@ -275,6 +275,41 @@ thead th{
    
 }
 
+/*final.html*/
+#carrinho-final {
+    width: 70%;
+    background-color: #f0dfc8;
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px;
+    margin: 10%;
+}
+#carrinho-final td{
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
+#carrinho-final button{
+    border-radius: 12px;
+    background-color: #f39c12;
+    font-size: 15px;
+    padding: 8px;
+    margin: 10px;
+    border-color: #f39c12;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#pagamentos-final{
+    display: none;
+    font-size: 18px;
+    padding: 2rem;
+}
+#pagamentos-final input {
+    padding: 20px;
+}
+
 
 /*carrossel*/
 nav a {

@@ -76,7 +76,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 function popUpPag() {
-  const largura = 600;
+  const largura = 800;
   const altura = 700;
   const esquerda = (screen.width - largura) / 2;
   const topo = (screen.height - altura) / 2;
