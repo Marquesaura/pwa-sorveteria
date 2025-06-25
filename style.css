@@ -246,15 +246,36 @@ p {
     text-align: center;
     align-items: center;
 }
-#carrinho th{
+thead th{
     font-size: 25px;
     padding: 10px;
     color: #795833;
 }
+#carrinho button{
+    border-radius: 12px;
+    background-color: #f39c12;
+    font-size: 18px;
+    padding: 8px;
+    margin: 10px;
+    border-color: #f39c12;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#pagamentos{
+    display: none;
+    font-size: 20px;
+    padding: 2rem;
+}
+#pagamentos input {
+    padding: 20px;
+}
+
 #valorTotal{
     padding-bottom: -30px;
    
 }
+
+
 /*carrossel*/
 nav a {
     margin: 0 1rem;

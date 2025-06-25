@@ -75,3 +75,7 @@ if ('serviceWorker' in navigator) {
       console.log('Falha ao registrar o Service Worker:', error);
     });
 }
+function popUpPag(){
+  window.open('produto.html', "pagamento", "width=500,height=600");
+  document.getElementById("produtos").style.display = "none "
+}

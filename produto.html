@@ -359,8 +359,16 @@
                     </tr>
                 </tfoot>
             </table>
-
-            <button type="button" id="finalizar">finalizar</button>
+            <button type="button" id="finalizar" onclick="popUpPag()">Finalizar</button>
+            <div id="pagamentos">
+                <h4>Forma de pagamento:</h4>
+                <label for="pagamento">
+                    <input type="radio" value="pix" name="formas-pagamento">Pix
+                    <input type="radio" value="cartao" name="formas-pagamento">Cartão
+                    <input type="radio" value="boleto" name="formas-pagamento">Boleto
+                    <input type="radio" value="dinheiro" name="formas-pagamento">Dinheiro
+                </label>
+            </div>
         </section>
 
 
