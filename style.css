@@ -231,6 +231,30 @@ p {
     transform: scale(1.05);
 }
 
+#carrinho {
+    width: 87rem;
+    background-color: #f0dfc8;
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+}
+#carrinho td{
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
+#carrinho th{
+    font-size: 25px;
+    padding: 10px;
+    color: #795833;
+}
+#valorTotal{
+    padding-bottom: -30px;
+   
+}
 /*carrossel*/
 nav a {
     margin: 0 1rem;

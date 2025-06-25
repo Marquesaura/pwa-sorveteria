@@ -1,376 +1,986 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="folder/Glace.png" type="image/x-icon">
+* {
+    margin: 0;
+    padding: 0;
+}
 
-    <title>Produtos</title>
-</head>
+body {
+    font-family: 'Questrial', Georgia, 'Times New Roman', Times, serif;
+    background-color: #51abb2;
+}
 
-<body>
-    <header>
-        <div id="preloader">
-            <img src="folder/logo-sem-fundo.png" alt="Carregando..." id="loader-logo">
-        </div>
-        <img src="folder/Glace.png" alt="logo" id="logo">
-        <div id="secao-canto">
-            <a href="index.html">Início</a> <br>
-            <a href="produto.html">Produtos</a> <br>
-            <a href="unidades.html">Unidades</a> <br>
-            <img src="folder/star.png" alt="estrela" id="estrela">
-        </div>
-        <section id="produtos">
-            <h2>Nossos Produtos</h2>
-            <div id="carousel">
-                <button id="prev">❮</button>
-                <div id="carousel-container">
-                    <img src="folder/casquinha-festa.jpg" alt="casquinha festa" class="carousel-img">
-                    <img src="folder/menina-segurando-casquinha.jpg" alt="menina segurando casquinha"
-                        class="carousel-img">
-                    <img src="folder/casquinhas-casamento.jpg" alt="casquinhas casamento" class="carousel-img">
-                    <img src="folder/menina-sorvete-palito.jpg" alt="sorvete no palito" class="carousel-img">
-                </div>
-                <button id="next">❯</button>
-            </div>
-        </section>
-        <main id="menu">
-            <div class="sec-prod">
-                <img src="folder/milkshake-pretzel.jpg" alt="milkshake-pretzel" id="milkshake-pretzel" loading="lazy">
-                <h3 class="nome">Milkshake</h3>
-                <p>Descrição: Uma combinação deliciosa de sorvete de chocolate cremoso, calda intensa e pedacinhos
-                    crocantes de
-                    pretzel. Doce e salgado na medida certa, servido com chantilly para uma finalização irresistível.
-                    Perfeito para quem busca sabor e textura em cada gole.</p>
-                <div class="opcoes">
-                    <label> <input type="radio" value="Chocolate" name="sabor-milkshake">Chocolate</label>
-                    <label> <input type="radio" value="Baunilha" name="sabor-milkshake">Baunilha</label>
-                    <label><input type="radio" value="Pistache" name="sabor-milkshake">Pistache</label>
-                    <label><input type="radio" value="Flocos" name="sabor-milkshake">Flocos</label>
-                    <label><input type="radio" value="Doce_de_leite" name="sabor-milkshake">Doce de leite</label>
-                    <label><input type="radio" value="Coco" name="sabor-milkshake">Coco</label>
-                    <label><input type="radio" value="Cafe" name="sabor-milkshake">Café</label>
-                    <label><input type="radio" value="Limao_siciliano" name="sabor-milkshake">Limão
-                        siciliano</label>
-                    <label><input type="radio" value="Morango" name="sabor-milkshake">Morango</label>
-                    <label> <input type="radio" value="Manga" name="sabor-milkshake">Manga</label>
-                    <label><input type="radio" value="Abacaxi" name="sabor-milkshake">Abacaxi</label>
-                    <label><input type="radio" value="Maracuja" name="sabor-milkshake">Maracujá</label>
-                    <label> <input type="radio" value="Uva" name="sabor-milkshake">Uva</label>
-                    <label><input type="radio" value="Framboesa" name="sabor-milkshake">Framboesa</label>
-                    <label><input type="radio" value="Acai" name="sabor-milkshake">Açaí</label>
-                    <label><input type="radio" value="Melancia" name="sabor-milkshake">Melancia</label>
-                    <label><input type="radio" value="Goiaba" name="sabor-milkshake">Goiaba</label>
-                    <label><input type="radio" value="Tangerina" name="sabor-milkshake">Tangerina</label>
-                    <label><input type="radio" value="Cupuaçu" name="sabor-milkshake">Cupuaçu</label>
-                    <select class="tamanhos">
-                        <option value="300">300 ml</option>
-                        <option value="400">400 ml</option>
-                        <option value="500">500 ml</option>
-                    </select>
-                </div>
-                <span class="valor">Valor: R$22,00</span>
-                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
-                <button class="mais">Mais opções</button>
-            </div>
-            <div class="sec-prod">
-                <img src="folder/sorvete-derretendo-no-cone.jpg" alt="sorvete-derretendo-no-cone"
-                    id="sorvete-derretendo" loading="lazy">
-                <h3 class="nome">Sorvete na casquinha</h3>
-                <p>Descrição: Nada como saborear um delicioso sorvete no cone! A combinação perfeita entre um cone
-                    crocante e um sorvete irresistível, garantindo textura e sabor incomparáveis. Experimente as
-                    melhores combinações e surpreenda-se!</p>
-                <div class="opcoes">
-                    <label id="itens-casquinha">
-                        <input type="radio" value="Chocolate" name="sabor-casquinha">Chocolate</label>
-                    <label> <input type="radio" value="Baunilha" name="sabor-casquinha">Baunilha</label>
-                    <label><input type="radio" value="Pistache" name="sabor-casquinha">Pistache</label>
-                    <label><input type="radio" value="Flocos" name="sabor-casquinha">Flocos</label>
-                    <label><input type="radio" value="Doce_de_leite" name="sabor-casquinha">Doce de leite</label>
-                    <label><input type="radio" value="Coco" name="sabor-casquinha">Coco</label>
-                    <label><input type="radio" value="Cafe" name="sabor-casquinha">Café</label>
-                    <label><input type="radio" value="Limao_siciliano" name="sabor-casquinha">Limão siciliano</label>
-                    <label><input type="radio" value="Morango" name="sabor-casquinha">Morango</label>
-                    <label><input type="radio" value="Manga" name="sabor-casquinha">Manga</label>
-                    <label><input type="radio" value="Abacaxi" name="sabor-casquinha">Abacaxi</label>
-                    <label><input type="radio" value="Maracuja" name="sabor-casquinha">Maracujá</label>
-                    <label><input type="radio" value="Uva" name="sabor-casquinha">Uva</label>
-                    <label><input type="radio" value="Framboesa" name="sabor-casquinha">Framboesa</label>
-                    <label><input type="radio" value="Acai" name="sabor-casquinha">Açaí</label>
-                    <label><input type="radio" value="Melancia" name="sabor-casquinha">Melancia</label>
-                    <label><input type="radio" value="Goiaba" name="sabor-casquinha">Goiaba</label>
-                    <label><input type="radio" value="Tangerina" name="sabor-casquinha">Tangerina</label>
-                    <label><input type="radio" value="Cupuaçu" name="sabor-casquinha">Cupuaçu</label>
-                    <select id="tamanhos-casq">
-                        <option value="2">2 bolas</option>
-                        <option value="3">3 bolas</option>
-                        <option value="4">4 bolas</option>
-                    </select>
-                </div>
-                <span class="valor">Valor: R$12,00</span>
-                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
-                <button class="mais">Mais opções</button>
-            </div>
-            <div class="sec-prod">
-                <img src="folder/mão-pote.jpg" alt="mão no pote de sorvete" id="mão-pote" loading="lazy">
-                <h3 class="nome">Sorvete no pote</h3>
-                <p>Descrição: Uma delícia gelada para qualquer ocasião! O sorvete no pote oferece diferentes sabores
-                    irresistíveis, perfeito para consumo doméstico ou comercial. Sua embalagem prática facilita o
-                    transporte e a conservação, garantindo frescor e qualidade.
-                </p>
-                <div class="opcoes">
-                    <label><input type="radio" value="Chocolate" name="sabor-pote">Chocolate</label>
-                    <label><input type="radio" value="Baunilha" name="sabor-pote">Baunilha</label>
-                    <label><input type="radio" value="Pistache" name="sabor-pote">Pistache</label>
-                    <label><input type="radio" value="Flocos" name="sabor-pote">Flocos</label>
-                    <label><input type="radio" value="Doce_de_leite" name="sabor-pote">Doce de
-                        leite</label>
-                    <label><input type="radio" value="Coco" name="sabor-pote">Coco</label>
-                    <label><input type="radio" value="Cafe" name="sabor-pote">Café</label>
-                    <label><input type="radio" value="Limao_siciliano" name="sabor-pote">Limão
-                        siciliano</label>
-                    <label><input type="radio" value="Morango" name="sabor-pote">Morango</label>
-                    <label><input type="radio" value="Manga" name="sabor-pote">Manga</label>
-                    <label><input type="radio" value="Abacaxi" name="sabor-pote">Abacaxi</label>
-                    <label><input type="radio" value="Maracuja" name="sabor-pote">Maracujá</label>
-                    <label><input type="radio" value="Uva" name="sabor-pote">Uva</label>
-                    <label><input type="radio" value="Framboesa" name="sabor-pote">Framboesa</label>
-                    <label><input type="radio" value="Acai" name="sabor-pote">Açaí</label>
-                    <label><input type="radio" value="Melancia" name="sabor-pote">Melancia</label>
-                    <label><input type="radio" value="Goiaba" name="sabor-pote">Goiaba</label>
-                    <label><input type="radio" value="Tangerina" name="sabor-pote">Tangerina</label>
-                    <label><input type="radio" value="Cupuaçu" name="sabor-pote">Cupuaçu</label>
-                    <select class="tamanhos">
-                        <option value="300">300 ml</option>
-                        <option value="400">400 ml</option>
-                        <option value="500">500 ml</option>
-                    </select>
-                </div>
-                <br>
-                <span class="valor">Valor: R$34,00/kg</span>
-                <button class="adicionar" onclick="carrinho('sorvete', tamanho, '34', sabor)">Adicionar ao
-                    carrinho</button>
-                <button class="mais">Mais opções</button>
-            </div>
-            <div class="sec-prod">
-                <img src="folder/picolé-fruta.jpg" alt="picolé-fruta" id="picole-fruta" loading="lazy">
-                <h3 class="nome">Picolés de fruta</h3>
-                <p>Descrição: Perfeitos para os dias quentes! Os picolés de fruta são feitos com suco ou polpa de frutas
-                    naturais, garantindo um sabor autêntico e nutritivo. Alguns contêm pedaços de fruta, trazendo ainda
-                    mais textura e frescor. Uma delícia congelada para consumir de forma prática!
-                </p>
-                <div class="opcoes">
-                    <label id="itens-picole">
-                        <input type="radio" value="Coco" name="sabor-picole">Coco
-                        <input type="radio" value="Limao_siciliano" name="sabor-picole">Limão
-                        siciliano
-                        <input type="radio" value="Morango" name="sabor-picole">Morango
-                        <input type="radio" value="Manga" name="sabor-picole">Manga
-                        <input type="radio" value="Abacaxi" name="sabor-picole">Abacaxi
-                        <input type="radio" value="Maracuja" name="sabor-picole">Maracujá
-                        <input type="radio" value="Limao_Siciliano" name="sabor-picole">Limão Siciliano
-                        <input type="radio" value="Uva" name="sabor-picole">Uva
-                        <input type="radio" value="Framboesa" name="sabor-picole">Framboesa
-                        <input type="radio" value="Acai" name="sabor-picole">Açaí
-                        <input type="radio" value="Melancia" name="sabor-picole">Melancia
-                        <input type="radio" value="Goiaba" name="sabor-picole">Goiaba
-                        <input type="radio" value="Tangerina" name="sabor-picole">Tangerina
-                        <input type="radio" value="Cupuaçu" name="sabor-picole">Cupuaçu
-                    </label>
-                    <select class="tamanhos">
-                        <option value="unico">Tamanho único</option>
-                    </select>
-                </div>
-                <span class="valor">Valor: R$2,50</span>
-                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
-                <button class="mais">Mais opções</button>
-            </div>
-            <div class="sec-prod">
-                <img src="folder/sorbet.jpg" alt="sorbet com frutas no pote" id="sorbet-img" loading="lazy">
-                <h3 class="nome">Sorbet </h3>
-                <p>Descrição: Uma explosão de sabor sem laticínios! O sorbet é a escolha perfeita para quem busca uma
-                    sobremesa gelada mais leve e cheia de frutas naturais. Sua textura macia e seu frescor garantem um
-                    prazer irresistível a cada colherada.
-                </p>
-                <div class="opcoes">
-                    <label id="itens-sorbet">
-                        <input type="radio" value="Morango" name="sabor-sorbet">Morango
-                        <input type="radio" value="Manga" name="sabor-sorbet">Manga
-                        <input type="radio" value="Abacaxi" name="sabor-sorbet">Abacaxi
-                        <input type="radio" value="Maracuja" name="sabor-sorbet">Maracujá
-                        <input type="radio" value="Limao_Siciliano" name="sabor-sorbet">Limão Siciliano
-                        <input type="radio" value="Uva" name="sabor-sorbet">Uva
-                        <input type="radio" value="Framboesa" name="sabor-sorbet">Framboesa
-                        <input type="radio" value="Acai" name="sabor-sorbet">Açaí
-                        <input type="radio" value="Melancia" name="sabor-sorbet">Melancia
-                        <input type="radio" value="Goiaba" name="sabor-sorbet">Goiaba
-                        <input type="radio" value="Tangerina" name="sabor-sorbet">Tangerina
-                        <input type="radio" value="Cupuaçu" name="sabor-sorbet">Cupuaçu
-                    </label>
-                    <select class="tamanhos">
-                        <option value="300">300 ml</option>
-                        <option value="400">400 ml</option>
-                        <option value="500">500 ml</option>
-                    </select>
-                </div>
-                <span class="valor">Valor: R$20,50</span>
-                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
-                <button class="mais">Mais opções</button>
-            </div>
-            <div class="sec-prod">
-                <img src="folder/frozen.jpg" alt="frozen" id="frozen" loading="lazy">
-                <h3 class="nome">Frozen yogurt</h3>
-                <p>Descrição: A sobremesa gelada perfeita para quem busca equilíbrio entre sabor e saúde! O frozen
-                    yogurt tem uma textura aerada, um toque levemente ácido e um teor de gordura mais baixo que o
-                    sorvete tradicional. Além disso, contém probióticos que fazem bem para o seu organismo!</p>
-                <div class="opcoes">
-                    <label id="itens-frozen">
-                        <input type="radio" value="Chocolate" name="sabor-frozen">Chocolate
-                        <input type="radio" value="Baunilha" name="sabor-frozen">Baunilha
-                        <input type="radio" value="Pistache" name="sabor-frozen">Pistache
-                        <input type="radio" value="Flocos" name="sabor-frozen">Flocos
-                        <input type="radio" value="Doce_de_leite" name="sabor-frozen">Doce de leite
-                        <input type="radio" value="Coco" name="sabor-frozen">Coco
-                        <input type="radio" value="Cafe" name="sabor-frozen">Café
-                        <input type="radio" value="Limao_siciliano" name="sabor-frozen">Limão siciliano
-                        <input type="radio" value="Morango" name="sabor-frozen">Morango
-                        <input type="radio" value="Manga" name="sabor-frozen">Manga
-                        <input type="radio" value="Abacaxi" name="sabor-frozen">Abacaxi
-                        <input type="radio" value="Maracuja" name="sabor-frozen">Maracujá
-                        <input type="radio" value="Uva" name="sabor-frozen">Uva
-                        <input type="radio" value="Framboesa" name="sabor-frozen">Framboesa
-                        <input type="radio" value="Acai" name="sabor-frozen">Açaí
-                        <input type="radio" value="Melancia" name="sabor-frozen">Melancia
-                        <input type="radio" value="Goiaba" name="sabor-frozen">Goiaba
-                        <input type="radio" value="Tangerina" name="sabor-frozen">Tangerina
-                        <input type="radio" value="Cupuaçu" name="sabor-frozen">Cupuaçu
-                    </label>
-                    <select class="tamanhos">
-                        <option value="300">300 ml</option>
-                        <option value="400">400 ml</option>
-                        <option value="500">500 ml</option>
-                    </select>
-                </div>
-                <span class="valor">Valor: R$12,00</span>
-                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
-                <button class="mais">Mais opções</button>
-            </div>
-            <div class="sec-prod">
-                <img src="folder/sherebt.jpg" alt="sherbet" id="sherebt" loading="lazy">
-                <h3 class="nome">Sherbet</h3>
-                <p>Descrição: Uma explosão refrescante de sabor! O sherbet combina ingredientes naturais para criar uma
-                    sobremesa congelada incrivelmente leve e cremosa. Perfeito para quem quer algo entre o sorvete
-                    tradicional e o sorbet!</p>
-                <div class="opcoes">
-                    <label id="itens-sherebt">
-                        <input type="radio" value="Chocolate" name="sabor-sherebt">Chocolate
-                        <input type="radio" value="Baunilha" name="sabor-sherebt">Baunilha
-                        <input type="radio" value="Pistache" name="sabor-sherebt">Pistache
-                        <input type="radio" value="Flocos" name="sabor-sherebt">Flocos
-                        <input type="radio" value="Doce_de_leite" name="sabor-sherebt">Doce de leite
-                        <input type="radio" value="Coco" name="sabor-sherebt">Coco
-                        <input type="radio" value="Cafe" name="sabor-sherebt">Café
-                        <input type="radio" value="Limao_siciliano" name="sabor-sherebt">Limão siciliano
-                        <input type="radio" value="Morango" name="sabor-sherebt">Morango
-                        <input type="radio" value="Manga" name="sabor-sherebt">Manga
-                        <input type="radio" value="Abacaxi" name="sabor-sherebt">Abacaxi
-                        <input type="radio" value="Maracuja" name="sabor-sherebt">Maracujá
-                        <input type="radio" value="Uva" name="sabor-sherebt">Uva
-                        <input type="radio" value="Framboesa" name="sabor-sherebt">Framboesa
-                        <input type="radio" value="Acai" name="sabor-sherebt">Açaí
-                        <input type="radio" value="Melancia" name="sabor-sherebt">Melancia
-                        <input type="radio" value="Goiaba" name="sabor-sherebt">Goiaba
-                        <input type="radio" value="Tangerina" name="sabor-sherebt">Tangerina
-                        <input type="radio" value="Cupuaçu" name="sabor-sherebt">Cupuaçu
-                    </label>
-                    <select class="tamanhos">
-                        <option value="300">300 ml</option>
-                        <option value="400">400 ml</option>
-                        <option value="500">500 ml</option>
-                    </select>
-                </div>
-                <span class="valor">Valor: R$12,00</span>
-                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
-                <button class="mais">Mais opções</button>
-            </div>
-            <div class="sec-prod">
-                <img src="folder/paletas.jpg" alt="paletas" id="paletas" loading="lazy">
-                <h3 class="nome">Paleta Mexicana</h3>
-                <p>Descrição: Quer uma explosão de sabor? Experimente nossas deliciosas paletas mexicanas, feitas com
-                    ingredientes naturais e recheios irresistíveis! Com textura cremosa e pedaços de frutas frescas,
-                    cada mordida é uma experiência única. </p>
-                <div class="opcoes">
-                    <label id="itens-paletas">
-                        <input type="radio" value="Chocolate_recheado" name="sabor-paleta">Chocolate recheado
-                        <input type="radio" value="Morango_com_leite_condensado" name="sabor-paleta">Morango com leite
-                        condensado
-                        <input type="radio" value="Pistache" name="sabor-paleta">Pistache
-                        <input type="radio" value="Flocos" name="sabor-paleta">Flocos
-                        <input type="radio" value="Doce_de_leite" name="sabor-paleta">Doce de leite
-                        <input type="radio" value="Coco" name="sabor-paleta">Coco
-                        <input type="radio" value="Frutas_vermelhas" name="sabor-paleta">Frutas vermelhas
-                        <input type="radio" value="Limao_siciliano" name="sabor-paleta">Limão siciliano
-                        <input type="radio" value="Morango" name="sabor-paleta">Morango
-                        <input type="radio" value="Manga" name="sabor-paleta">Manga
-                        <input type="radio" value="Abacaxi_com_hortela" name="sabor-paleta">Abacaxi com hortelã
-                        <input type="radio" value="Maracuja" name="sabor-paleta">Maracujá
-                        <input type="radio" value="Uva" name="sabor-paleta">Uva
-                        <input type="radio" value="Framboesa" name="sabor-paleta">Framboesa
-                        <input type="radio" value="Acai" name="sabor-paleta">Açaí
-                        <input type="radio" value="Melancia" name="sabor-paleta">Melancia
-                        <input type="radio" value="Goiaba" name="sabor-paleta">Goiaba
-                        <input type="radio" value="Tangerina" name="sabor-paleta">Tangerina
-                        <input type="radio" value="Cupuaçu" name="sabor-paleta">Cupuaçu
-                    </label>
-                    <select class="tamanhos">
-                        <option value="unico">Tamanho único</option>
-                    </select>
-                </div>
+#preloader {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
 
-                <span class="valor">Valor: R$12,00</span>
-                <button class="adicionar" onclick="carrinho()">Adicionar ao carrinho</button>
-                <button class="mais">Mais opções</button>
-            </div>
-        </main>
-        
-            <button class="excluir" onclick="removerCarrinho()">Excluir</button>
-            <button id="adicionar-mais">adicionar</button>
-        <section id="carrinho" style="width: 500px;">
-            <h2>Carrinho</h2>
+#secao-canto {
+    background-color: #f0dfc8;
+    margin-left: 90%;
+    font-size: 21px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 193px;
+    margin-top: -15%;
+}
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Preço</th>
-                        <th>Quantidade</th>
-                    </tr>
-                </thead>
-                <tbody id="itens-final">
-                </tbody>
-                <tfoot >
-                    <tr>
-                        <td colspan="3">
-                            <strong id="valorTotal">Total</strong>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+#secao-canto a {
+    margin-top: 7px;
+    text-decoration: none;
+    color: #000000;
+    margin: 5px;
+}
 
-            <button type="button" id="finalizar">finalizar</button>
-        </section>
+#secao-canto a:hover,
+#estrela:hover {
+    cursor: pointer;
+    font-size: 22px;
+    height: 33px;
+    color: #51abb2;
+    transition: 0.5s;
+    border-color: left #51abb2;
+}
+
+#logo {
+    width: 200px;
+    margin: 20px;
+}
+
+#logo-footer {
+    width: 200px;
+    align-items: center;
+    margin-left: 45%;
+}
+
+#estrela {
+    height: 30px;
+}
+
+footer {
+    margin-bottom: -4%;
+    margin-top: 2rem;
+}
+
+#boas-vindas {
+    color: #ffb1a5;
+    font-size: 30px;
+}
+
+#banner-sorvetes {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+#inicio {
+    margin-left: 40%;
+    margin-top: -40%;
+    text-align: justify;
+}
+
+#texto-inicial {
+    text-align: justify;
+    font-size: 25px;
+    width: 70%;
+}
+
+#anuncio-sorvetes {
+    margin: 10%;
+    margin-top: 25%;
+}
+
+#experimente-h2 {
+    width: 380px;
+    font-size: 60px;
+    margin-bottom: -25%;
+}
+
+#saudavel-h2 {
+    width: 380px;
+    font-size: 60px;
+    margin-top: -25%;
+    text-align: right;
+    margin-left: 65%;
+}
+
+#milk-shakes-sabores {
+    margin-left: 33%;
+}
+
+#picole-fruta {
+    margin-right: 23%;
+}
+
+#anuncio-sorvetes img {
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
 
 
+/*produto.html */
+.sec-prod {
+    background-color: #f0dfc8;
+    margin: 30px 30px 10px 4%;
+    padding: 10px;
+    border-radius: 20px;
+    width: 25%;
+    display: inline-block;
+    min-height: 580px;
+    vertical-align: top;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+}
 
-        <footer>
-            <img src="folder/Glace.png" alt="logo" id="logo-footer">
-            <p>&copy; 2025 Glace Sorvetes. Todos os direitos reservados.</p>
-        </footer>
-        <script src="script.js"></script>
-        <script src="carrinho.js"></script>
-</body>
+.sec-prod img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    padding: -20px;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 13%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
-</html>
+.sec-prod:hover {
+    background-color: #e7cfa9;
+    transition: 0.4s;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.sec-prod p {
+    margin: 10px;
+    font-size: 17px;
+    margin-bottom: 40px;
+
+}
+
+.nome {
+    margin-left: 30%;
+    font-size: 30px;
+}
+
+ul {
+    text-decoration: none;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#titu-main {
+    font-size: 23px;
+    text-align: center;
+    padding: 10px;
+}
+
+#titulo-menu {
+    font-size: 44px;
+    text-align: center;
+    padding: 10px;
+}
+
+.opcoes {
+    display: none;
+    font-size: 20px;
+    color: #795833;
+    margin: 20px;
+    border-radius: 10px;
+
+}
+
+.opcoes input {
+    margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.tamanhos {
+    font-size: 20px;
+    color: #795833;
+    margin-left: 40%;
+    border-radius: 10px;
+}
+
+.mais {
+    width: 110px;
+    font-size: 15px;
+    background-color: #ffb1a5;
+    padding: 7px;
+    margin: 0;
+    margin-bottom: 30px;
+    margin-left: 36%;
+    border-radius: 10px;
+    border-color: #ffb1a5;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.mais:hover {
+    background-color: #f06;
+    transform: scale(1.05);
+}
+
+#carrinho {
+    width: 87rem;
+    background-color: #f0dfc8;
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+}
+#carrinho td{
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
+#carrinho th{
+    font-size: 25px;
+    padding: 10px;
+    color: #795833;
+}
+#valorTotal{
+    padding-bottom: -30px;
+   
+}
+/*carrossel*/
+nav a {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 2rem;
+}
+
+#produtos h2 {
+    color: #f06;
+    margin-bottom: 1rem;
+}
+
+#carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#carousel-container {
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.carousel-img.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+#carousel button {
+    background-color: #ffb1a5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#carousel button:hover {
+    background-color: #f06;
+    transform: scale(1.1);
+}
+
+/* carrinho */
+.adicionar {
+    width: 205px;
+    font-size: 17px;
+    background-color: #f06;
+    padding: 10px;
+    margin: 20px;
+    margin-left: 22%;
+    border-radius: 10px;
+    border-color: #f06;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+.adicionar:hover {
+    background-color: #d05;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.valor {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 32%;
+    font-size: 20px;
+    background-color: #f0dfc8;
+    border-radius: 10px;
+    padding: 10px;
+    color: #795833;
+    box-shadow: 2px 2px 3px #795833;
+}
+
+
+/*unidades.html*/
+#mapa {
+    border-radius: 10px;
+    margin-left: 30%;
+
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #51abb2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(2.3);
+        opacity: 1;
+    }
+}
+
+#loader-logo {
+    width: 100px;
+    transition: transform 0.4s ease;
+    animation: zoomIn 2s ease forwards;
+}
+
+/* avaliacao.html*/
+.avaliacao-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.avaliacao-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avaliacao-header h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.avaliacao-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.estrelas-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.estrelas {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.estrela {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ddd;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.estrela.ativa {
+    color: #f39c12;
+}
+
+.estrela:hover,
+.estrela:hover~.estrela {
+    color: #f39c12;
+}
+
+.estrela:hover {
+    transform: scale(1.1);
+}
+
+.categoria-avaliacao {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.categoria-avaliacao h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.produtos-selecionados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.produto-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produto-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.produto-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.produto-item h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.produto-item p {
+    margin: 0.25rem 0 0 0;
+    color: #7f8c8d;
+    font-size: 0.8rem;
+}
+
+.btn-enviar {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}
+
+.mensagem-sucesso {
+    background: #d4edda;
+    color: #155724;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    text-align: center;
+    display: none;
+}
+
+.comentario-opcional {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+
+
+/* Mobile (até 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem !important;
+    }
+
+    #logo {
+        width: 120px !important;
+    }
+
+    #secao-canto {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 1rem 0 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        min-height: auto !important;
+        font-size: 0.9rem !important;
+        padding: 0.75rem !important;
+    }
+
+    #estrela {
+        height: 20px !important;
+    }
+
+    #inicio {
+        padding: 1rem !important;
+        margin-top: 0 !important;
+    }
+
+    #boas-vindas {
+        font-size: 1.8rem !important;
+        margin-top: 0 !important;
+    }
+
+    #texto-inicial {
+        font-size: 1rem !important;
+        padding: 1rem !important;
+    }
+
+    #anuncio-sorvetes {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+    }
+
+    #experimente-h2,
+    #saudavel-h2 {
+        font-size: 1.5rem !important;
+        margin: 1rem 0 !important;
+    }
+
+    #anuncio-sorvetes img {
+        height: 250px !important;
+    }
+
+    #produtos {
+        padding: 1rem !important;
+    }
+
+    #produtos h2 {
+        font-size: 2rem !important;
+    }
+
+    #carousel {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+
+    #carousel-container {
+        height: 250px !important;
+    }
+
+    #carousel button {
+        padding: 0.75rem 1rem !important;
+        font-size: 1.2rem !important;
+    }
+
+    #menu {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+    }
+
+    .sec-prod {
+        min-height: auto !important;
+        padding: 1rem !important;
+    }
+
+    .sec-prod img {
+        height: 200px !important;
+    }
+
+    .nome {
+        font-size: 1.3rem !important;
+    }
+
+    .sec-prod p {
+        font-size: 0.9rem !important;
+    }
+
+    .opcoes {
+        font-size: 0.9rem !important;
+    }
+
+    .tamanhos {
+        font-size: 0.9rem !important;
+    }
+
+    .mais {
+        width: 100px !important;
+        font-size: 0.9rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+
+    .adicionar {
+        font-size: 1rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .valor {
+        font-size: 1rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .avaliacao-container {
+        margin: 1rem !important;
+        padding: 1rem !important;
+    }
+
+    .avaliacao-header h1 {
+        font-size: 2rem !important;
+    }
+
+    .avaliacao-header p {
+        font-size: 1rem !important;
+    }
+
+    .form-group label {
+        font-size: 1rem !important;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.75rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .estrela {
+        font-size: 1.5rem !important;
+    }
+
+    .categoria-avaliacao {
+        padding: 1rem !important;
+    }
+
+    .categoria-avaliacao h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .produtos-selecionados {
+        grid-template-columns: 1fr !important;
+    }
+
+    .btn-enviar {
+        font-size: 1rem !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+
+    footer {
+        padding: 1rem !important;
+    }
+
+    #logo-footer {
+        width: 100px !important;
+    }
+
+    footer p {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media screen and (max-width: 480px) {
+    #logo {
+        width: 100px !important;
+    }
+
+    #secao-canto {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    #boas-vindas {
+        font-size: 1.5rem !important;
+    }
+
+    #texto-inicial {
+        font-size: 0.9rem !important;
+        padding: 0.75rem !important;
+    }
+
+    #experimente-h2,
+    #saudavel-h2 {
+        font-size: 1.3rem !important;
+    }
+
+    #anuncio-sorvetes img {
+        height: 200px !important;
+    }
+
+    #produtos h2 {
+        font-size: 1.5rem !important;
+    }
+
+    #carousel-container {
+        height: 200px !important;
+    }
+
+    .sec-prod img {
+        height: 180px !important;
+    }
+
+    .nome {
+        font-size: 1.1rem !important;
+    }
+
+    .sec-prod p {
+        font-size: 0.8rem !important;
+    }
+
+    .avaliacao-header h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .estrela {
+        font-size: 1.2rem !important;
+    }
+
+    .btn-enviar {
+        font-size: 0.9rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    #logo-footer {
+        width: 80px !important;
+    }
+}
+
+/* Tablet (até 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    #secao-canto {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 1rem 0 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 2rem !important;
+        min-height: auto !important;
+    }
+
+    #inicio {
+        padding: 1rem !important;
+    }
+
+    #boas-vindas {
+        font-size: 2rem !important;
+    }
+
+    #texto-inicial {
+        font-size: 1.1rem !important;
+    }
+
+    #experimente-h2,
+    #saudavel-h2 {
+        font-size: 2rem !important;
+    }
+
+    #menu {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+        gap: 1.5rem !important;
+        padding: 1rem !important;
+    }
+
+    .sec-prod {
+        min-height: 550px !important;
+    }
+
+    #carousel-container {
+        height: 300px !important;
+    }
+
+    .estrela {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Landscape mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #preloader {
+        position: relative !important;
+        height: 100vh !important;
+    }
+
+    #inicio {
+        margin-top: 0 !important;
+    }
+
+    #anuncio-sorvetes {
+        margin-top: 1rem !important;
+    }
+
+    .avaliacao-container {
+        margin: 1rem auto !important;
+    }
+
+    header {
+        padding: 0.5rem !important;
+    }
+
+    #secao-canto {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 0.5rem 0 !important;
+        flex-direction: row !important;
+        gap: 1rem !important;
+        min-height: auto !important;
+        padding: 0.5rem !important;
+    }
+}
+
+/* Desktop and larger screens */
+@media screen and (min-width: 1025px) {
+
+    /* Desktop styles are already in the main CSS */
+    /* This ensures proper scaling for very large screens */
+    .avaliacao-container {
+        max-width: 900px;
+    }
+
+    #menu {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi) {
+
+    #logo,
+    #logo-footer,
+    #estrela {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles */
+@media print {
+
+    header,
+    footer,
+    #preloader,
+    .mais,
+    .adicionar,
+    .btn-enviar {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .avaliacao-container {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+
+    .sec-prod {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+#produtos {
+    margin-bottom: 0;
+}
